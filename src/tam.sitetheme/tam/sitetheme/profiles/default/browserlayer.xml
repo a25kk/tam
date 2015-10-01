@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+    name="tam.sitetheme"
+    interface="tam.sitetheme.interfaces.ITamSiteThemeLayer"
+  />
+</layers>
