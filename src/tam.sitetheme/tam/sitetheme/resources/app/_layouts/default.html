@@ -13,11 +13,17 @@
     {% include components/toolbar.html %}
     {% include layout/header.html %}
     {% include components/banner.html %}
+    <div class="app-outer-contentwrapper">
+    <div class="app-inner-contentwrapper">
+    <div class="app-aside" id="app-aside">
+    </div>
 
     <main class="app-main" role="main">
           {{ content }}
     </main>
-
+    
+    </div>
+    </div>
     {% include layout/footer.html %}
     </div>
     {% include base/javascript.html %}

@@ -7,23 +7,39 @@
   background: url(../assets/img/bg.gif) repeat-x top center transparent;
 }
 
+.app-outer-contentwrapper {
+  @extend .container;
+}
+
+.app-inner-contentwrapper {
+  @extend .row;
+  //display: flex;
+  //align-items: left;
+  background: #fff;
+  border-radius: $border-radius-large;
+}
+
+.app-aside {
+  @extend .col-sm-3;
+}
+
 
 //== Main content area
 //
 //## Provides optional fullscreen layouts
 .app-main {
-  @extend .container-fluid;
-  &-fullscreen {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  @extend .col-sm-9;
+  //&-fullscreen {
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //}
 }
 
 .app-content {
-  @extend .container;
+  //@extend .container;
   &-centerstage {
-    @extend .container-fluid;
+    //@extend .container-fluid;
     @extend .center-block;
     max-width: 480px;
   }
@@ -35,9 +51,8 @@
 //## Define content specific styles
 .app-page {
   padding: $line-height-computed;
-  @extend .container;
+  //@extend .container;
   background: #fff;
-  border-radius: $border-radius-large;
 }
 
 .app-page-title {
