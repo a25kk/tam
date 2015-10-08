@@ -1,10 +1,15 @@
 <footer class="app-footer" id="app-footer" role="contentinfo">
-    <div class="app-footer-content">
-      <p class="app-copyright">
-        <strong>&copy; {{ site.time | date: '%Y' }} Dr. Robert Baur &middot; Alle Rechte vorbehalten</strong><br class="visible-xs">
-        &middot; <a href="{{ page.base_url }}impressum">Impressum</a><br class="visible-xs">
-        &middot; <a href="{{ page.base_url }}kontakt">Kontakt</a>
-        &middot; Site by <a href="http://kreativkombinat.de">KK</a><br class="visible-xs">
-      </p>
+	<div class="app-footer-content">
+    	<div class="app-footer-logo">
+    		<a class="" href="/">
+    			{% include components/logo.html %}
+    		</a>
+    	</div>
+      		<p class="app-copyright">
+        	<strong>&copy; {{ site.time | date: '%Y' }} Dr. Robert Baur &middot; Alle Rechte vorbehalten</strong><br class="visible-xs">
+        		&middot; <a href="{{ page.base_url }}impressum">Impressum</a><br class="visible-xs">
+        		&middot; <a href="{{ page.base_url }}kontakt">Kontakt</a><br class="visible-xs">
+        		&middot; Site by <a href="http://kreativkombinat.de">KK</a>
+      		</p>
     </div>
 </footer>

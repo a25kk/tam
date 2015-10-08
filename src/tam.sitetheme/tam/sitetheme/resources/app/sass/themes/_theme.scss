@@ -56,7 +56,12 @@
 }
 
 .app-page-title {
-  @extend .page-header;
+  //@extend .page-header;
+  .app-page-headline {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    color: $app-blue-primary;
+  }
 }
 
 
@@ -79,4 +84,9 @@
 //## Container providing visual separation
 .app-page-section {
   margin: 1rem 0 2rem;
+}
+
+.image-inline {
+  @extend .img-responsive;
+  width: 100%
 }

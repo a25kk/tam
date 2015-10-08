@@ -5,6 +5,9 @@
 .app-footer {
     padding-top: $line-height-computed;
     padding-bottom: $line-height-computed;
+    text-transform: uppercase;
+    color: #fff;
+    background: url(../assets/img/footer.jpg) repeat-x top center transparent;
 }
 
 .app-footer-content {
@@ -13,4 +16,14 @@
   a {
     text-transform: uppercase;
   }
+}
+
+.app-footer-logo {
+	max-width: 300px;
+	.app-brandname-logo {
+		width: 300px;
+		path {
+  			fill: #fff;
+		}
+	} 
 }

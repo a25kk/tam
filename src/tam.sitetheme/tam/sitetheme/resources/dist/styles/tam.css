@@ -3674,7 +3674,7 @@ html
 
 body
 {
-    font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1.428571429;
 
@@ -3722,7 +3722,8 @@ img
     vertical-align: middle;
 }
 
-.img-responsive
+.img-responsive,
+.image-inline
 {
     display: block;
 
@@ -3904,19 +3905,19 @@ h6 .small,
 h1,
 .h1
 {
-    font-size: 2.6rem;
+    font-size: 2rem;
 }
 
 h2,
 .h2
 {
-    font-size: 2.15rem;
+    font-size: 1.8rem;
 }
 
 h3,
 .h3
 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
 }
 
 h4,
@@ -4134,8 +4135,7 @@ a.bg-danger:focus
     background-color: #e4b9b9;
 }
 
-.page-header,
-.app-page-title
+.page-header
 {
     margin: 2.857142858rem 0 1.428571429rem;
     padding-bottom: -.2857142855rem;
@@ -5513,8 +5513,8 @@ table
 
 caption
 {
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    padding-top: .5714285714rem;
+    padding-bottom: .5714285714rem;
 
     text-align: left; 
 
@@ -5541,7 +5541,7 @@ th
 {
     line-height: 1.428571429;
 
-    padding: .5rem;
+    padding: .5714285714rem;
 
     vertical-align: top;
 
@@ -5578,7 +5578,7 @@ th
 .table-condensed > tfoot > tr > th,
 .table-condensed > tfoot > tr > td
 {
-    padding: .3125rem;
+    padding: .3571428571rem;
 }
 
 .table-bordered
@@ -5898,7 +5898,7 @@ output
 
     display: block;
 
-    padding-top: 1.375rem;
+    padding-top: 1.4285714286rem;
 
     color: #555;
 }
@@ -5912,8 +5912,8 @@ output
     display: block;
 
     width: 100%;
-    height: 2.178571429rem;
-    padding: .375rem .75rem;
+    height: 2.2857142861rem;
+    padding: .4285714286rem .8571428571rem;
 
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; 
 
@@ -5987,7 +5987,7 @@ input[type='search']
     input[type='month'].form-control,
     input[type='month'].app-searchbox-field
     {
-        line-height: 2.178571429rem;
+        line-height: 2.2857142861rem;
     }
     input[type='date'].input-sm,
     .input-group-sm input[type='date'],
@@ -5998,7 +5998,7 @@ input[type='search']
     input[type='month'].input-sm,
     .input-group-sm input[type='month']
     {
-        line-height: 1.9rem;
+        line-height: 1.9892857143rem;
     }
     input[type='date'].input-lg,
     .input-group-lg input[type='date'],
@@ -6009,7 +6009,7 @@ input[type='search']
     input[type='month'].input-lg,
     .input-group-lg input[type='month']
     {
-        line-height: 2.916666625rem;
+        line-height: 3.0952380536rem;
     }
 }
 
@@ -6110,8 +6110,8 @@ fieldset[disabled] .checkbox label
 {
     min-height: 2.428571429rem; 
     margin-bottom: 0;
-    padding-top: 1.375rem;
-    padding-bottom: 1.375rem;
+    padding-top: 1.4285714286rem;
+    padding-bottom: 1.4285714286rem;
 }
 .form-control-static.input-lg,
 .form-control-static.input-sm
@@ -6125,17 +6125,17 @@ fieldset[disabled] .checkbox label
     font-size: .85rem;
     line-height: 1.5;
 
-    height: 1.9rem;
-    padding: .3125rem .625rem;
+    height: 1.9892857143rem;
+    padding: .3571428571rem .7142857143rem;
 
     border-radius: 3px;
 }
 
 select.input-sm
 {
-    line-height: 1.9rem; 
+    line-height: 1.9892857143rem; 
 
-    height: 1.9rem;
+    height: 1.9892857143rem;
 }
 
 textarea.input-sm,
@@ -6150,8 +6150,8 @@ select[multiple].input-sm
     font-size: .85rem;
     line-height: 1.5;
 
-    height: 1.9rem;
-    padding: .3125rem .625rem;
+    height: 1.9892857143rem;
+    padding: .3571428571rem .7142857143rem;
 
     border-radius: 3px;
 }
@@ -6159,9 +6159,9 @@ select[multiple].input-sm
 .form-group-sm select.form-control,
 .form-group-sm select.app-searchbox-field
 {
-    line-height: 1.9rem; 
+    line-height: 1.9892857143rem; 
 
-    height: 1.9rem;
+    height: 1.9892857143rem;
 }
 
 .form-group-sm textarea.form-control,
@@ -6177,9 +6177,9 @@ select[multiple].input-sm
     font-size: .85rem;
     line-height: 1.5; 
 
-    height: 1.9rem;
+    height: 1.9892857143rem;
     min-height: 2.278571429rem;
-    padding: 1.3125rem .625rem;
+    padding: 1.3571428571rem .7142857143rem;
 }
 
 .input-lg
@@ -6187,17 +6187,17 @@ select[multiple].input-sm
     font-size: 1.25rem;
     line-height: 1.3333333;
 
-    height: 2.916666625rem;
-    padding: .625rem 1rem;
+    height: 3.0952380536rem;
+    padding: .7142857143rem 1.1428571429rem;
 
     border-radius: 6px;
 }
 
 select.input-lg
 {
-    line-height: 2.916666625rem; 
+    line-height: 3.0952380536rem; 
 
-    height: 2.916666625rem;
+    height: 3.0952380536rem;
 }
 
 textarea.input-lg,
@@ -6212,8 +6212,8 @@ select[multiple].input-lg
     font-size: 1.25rem;
     line-height: 1.3333333;
 
-    height: 2.916666625rem;
-    padding: .625rem 1rem;
+    height: 3.0952380536rem;
+    padding: .7142857143rem 1.1428571429rem;
 
     border-radius: 6px;
 }
@@ -6221,9 +6221,9 @@ select[multiple].input-lg
 .form-group-lg select.form-control,
 .form-group-lg select.app-searchbox-field
 {
-    line-height: 2.916666625rem; 
+    line-height: 3.0952380536rem; 
 
-    height: 2.916666625rem;
+    height: 3.0952380536rem;
 }
 
 .form-group-lg textarea.form-control,
@@ -6239,9 +6239,9 @@ select[multiple].input-lg
     font-size: 1.25rem;
     line-height: 1.3333333; 
 
-    height: 2.916666625rem;
+    height: 3.0952380536rem;
     min-height: 2.678571429rem;
-    padding: 1.625rem 1rem;
+    padding: 1.7142857143rem 1.1428571429rem;
 }
 
 .has-feedback
@@ -6251,12 +6251,12 @@ select[multiple].input-lg
 .has-feedback .form-control,
 .has-feedback .app-searchbox-field
 {
-    padding-right: 2.7232142862rem;
+    padding-right: 2.8571428577rem;
 }
 
 .form-control-feedback
 {
-    line-height: 2.178571429rem;
+    line-height: 2.2857142861rem;
 
     position: absolute;
     z-index: 2;
@@ -6265,8 +6265,8 @@ select[multiple].input-lg
 
     display: block;
 
-    width: 2.178571429rem;
-    height: 2.178571429rem;
+    width: 2.2857142861rem;
+    height: 2.2857142861rem;
 
     text-align: center;
     pointer-events: none;
@@ -6277,10 +6277,10 @@ select[multiple].input-lg
 .form-group-lg .form-control + .form-control-feedback,
 .form-group-lg .app-searchbox-field + .form-control-feedback
 {
-    line-height: 2.916666625rem; 
+    line-height: 3.0952380536rem; 
 
-    width: 2.916666625rem;
-    height: 2.916666625rem;
+    width: 3.0952380536rem;
+    height: 3.0952380536rem;
 }
 
 .input-sm + .form-control-feedback,
@@ -6288,10 +6288,10 @@ select[multiple].input-lg
 .form-group-sm .form-control + .form-control-feedback,
 .form-group-sm .app-searchbox-field + .form-control-feedback
 {
-    line-height: 1.9rem; 
+    line-height: 1.9892857143rem; 
 
-    width: 1.9rem;
-    height: 1.9rem;
+    width: 1.9892857143rem;
+    height: 1.9892857143rem;
 }
 
 .has-success .help-block,
@@ -6513,13 +6513,13 @@ select[multiple].input-lg
 {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 1.375rem;
+    padding-top: 1.4285714286rem;
 }
 
 .form-horizontal .radio,
 .form-horizontal .checkbox
 {
-    min-height: 2.803571429rem;
+    min-height: 2.8571428576rem;
 }
 
 .form-horizontal .form-group
@@ -6544,7 +6544,7 @@ select[multiple].input-lg
     .form-horizontal .control-label
     {
         margin-bottom: 0;
-        padding-top: 1.375rem; 
+        padding-top: 1.4285714286rem; 
 
         text-align: right;
     }
@@ -6561,7 +6561,7 @@ select[multiple].input-lg
     {
         font-size: 1.25rem; 
 
-        padding-top: 1.8333333125rem;
+        padding-top: 1.9523809286rem;
     }
 }
 
@@ -6571,7 +6571,7 @@ select[multiple].input-lg
     {
         font-size: .85rem; 
 
-        padding-top: 1.3125rem;
+        padding-top: 1.3571428571rem;
     }
 }
 
@@ -6585,7 +6585,7 @@ select[multiple].input-lg
     display: inline-block;
 
     margin-bottom: 0;
-    padding: .375rem .75rem;
+    padding: .4285714286rem .8571428571rem;
 
     cursor: pointer;
     -webkit-user-select: none;
@@ -7197,7 +7197,7 @@ fieldset[disabled] .btn-link:focus
     font-size: 1.25rem;
     line-height: 1.3333333;
 
-    padding: .625rem 1rem;
+    padding: .7142857143rem 1.1428571429rem;
 
     border-radius: 6px;
 }
@@ -7207,7 +7207,7 @@ fieldset[disabled] .btn-link:focus
     font-size: .85rem;
     line-height: 1.5;
 
-    padding: .3125rem .625rem;
+    padding: .3571428571rem .7142857143rem;
 
     border-radius: 3px;
 }
@@ -7217,7 +7217,7 @@ fieldset[disabled] .btn-link:focus
     font-size: .85rem;
     line-height: 1.5;
 
-    padding: .0625rem .3125rem;
+    padding: .0714285714rem .3571428571rem;
 
     border-radius: 3px;
 }
@@ -7840,9 +7840,9 @@ input[type='button'].btn-block
 
 .navbar-form
 {
-    margin-top: 7.571428568px;
+    margin-top: 8.999999997px;
     margin-right: -15px;
-    margin-bottom: 7.571428568px; 
+    margin-bottom: 8.999999997px; 
     margin-left: -15px;
     padding: 10px 15px;
 
@@ -7970,13 +7970,13 @@ input[type='button'].btn-block
 
 .navbar-btn
 {
-    margin-top: 7.571428568px;
-    margin-bottom: 7.571428568px;
+    margin-top: 8.999999997px;
+    margin-bottom: 8.999999997px;
 }
 .navbar-btn.btn-sm
 {
-    margin-top: 9.8px;
-    margin-bottom: 9.8px;
+    margin-top: 11.075px;
+    margin-bottom: 11.075px;
 }
 .navbar-btn.btn-xs
 {
@@ -7986,8 +7986,8 @@ input[type='button'].btn-block
 
 .navbar-text
 {
-    margin-top: 13.571428568px;
-    margin-bottom: 13.571428568px;
+    margin-top: 14.999999997px;
+    margin-bottom: 14.999999997px;
 }
 @media (min-width: 768px)
 {
@@ -8920,20 +8920,20 @@ a.label:focus
 
 html
 {
-    font-size: 16px;
+    font-size: 14px;
 }
 @media (min-width: 768px)
 {
     html
     {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 @media (min-width: 992px)
 {
     html
     {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 
@@ -8977,7 +8977,7 @@ a:hover
 
 pre
 {
-    font-size: .9375rem;
+    font-size: .9285714286rem;
 }
 
 .form-control-feedback
@@ -9009,7 +9009,7 @@ pre
 .form-horizontal .radio-inline,
 .form-horizontal .checkbox-inline
 {
-    padding: .375rem;
+    padding: .4285714286rem;
 
     border: 1px solid transparent;
 }
@@ -9022,8 +9022,8 @@ pre
 
 .form-horizontal .form-control-static
 {
-    padding-top: .375rem;
-    padding-bottom: .375rem;
+    padding-top: .4285714286rem;
+    padding-bottom: .4285714286rem;
 
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -9033,7 +9033,7 @@ pre
 {
     .form-horizontal .control-label
     {
-        padding-top: .375rem;
+        padding-top: .4285714286rem;
 
         border-top: 1px solid transparent;
     }
@@ -9240,6 +9240,9 @@ div.riform .label
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 @media (min-width: 767px)
 {
@@ -9251,14 +9254,11 @@ div.riform .label
     }
 }
 
-.app-navitem
-{
-    width: 100%;
-}
 @media (min-width: 767px)
 {
     .app-navitem
     {
+        width: 16.66666667%;
         width: auto;
     }
     .app-navitem:last-child
@@ -9305,6 +9305,12 @@ div.riform .label
         display: -webkit-flex;
         display: -ms-flexbox;
         display:         flex;
+
+        text-align: center; 
+
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+                align-items: center;
     }
 }
 
@@ -9340,6 +9346,11 @@ div.riform .label
 {
     padding-top: 1.428571429rem;
     padding-bottom: 1.428571429rem;
+
+    text-transform: uppercase;
+
+    color: #fff;
+    background: url(../assets/img/footer.jpg) repeat-x top center transparent;
 }
 
 .app-footer-content
@@ -9349,6 +9360,19 @@ div.riform .label
 .app-footer-content a
 {
     text-transform: uppercase;
+}
+
+.app-footer-logo
+{
+    max-width: 300px;
+}
+.app-footer-logo .app-brandname-logo
+{
+    width: 300px;
+}
+.app-footer-logo .app-brandname-logo path
+{
+    fill: #fff;
 }
 
 label
@@ -9492,7 +9516,7 @@ label
 
 .plone-toolbar-nav
 {
-    font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 12px;
 
     margin: 0;
@@ -9556,7 +9580,7 @@ label
 
 .plone-toolbar-subnav
 {
-    font-family: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 30px;
 
@@ -9803,7 +9827,7 @@ label
     display:         flex;
 
     width: 100%;
-    margin-right: .625rem; 
+    margin-right: .7142857143rem; 
 
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -9881,7 +9905,7 @@ label
 
     display: block;
 
-    padding: .625rem .3125rem;
+    padding: .7142857143rem .3571428571rem;
 
     color: #274d38;
 }
@@ -9948,7 +9972,7 @@ label
 
 .app-action
 {
-    padding: 1rem .3125rem;
+    padding: 1rem .3571428571rem;
 
     text-align: center; 
 
@@ -10161,7 +10185,7 @@ fieldset[disabled] .app-searchbox-btn.active
 
     height: 8rem;
     min-height: 8rem;
-    padding: 1rem .625rem;
+    padding: 1rem .7142857143rem;
 
     background: #588c73; 
 
@@ -10172,14 +10196,14 @@ fieldset[disabled] .app-searchbox-btn.active
 
 .app-card-main
 {
-    padding: .3125rem .625rem;
+    padding: .3571428571rem .7142857143rem;
 
     background: #274d38;
 }
 
 .app-card-footer
 {
-    padding: .3125rem .625rem;
+    padding: .3571428571rem .7142857143rem;
 }
 
 .app-card-gutter
@@ -10797,6 +10821,15 @@ dl.portlet ul.navTree .navTreeCurrentItem
     background: #fff;
 }
 
+.app-page-title .app-page-headline
+{
+    font-size: 1.7rem;
+
+    text-transform: uppercase;
+
+    color: #05517d;
+}
+
 .app-page-lead,
 .app-page-abstract
 {
@@ -10818,6 +10851,11 @@ dl.portlet ul.navTree .navTreeCurrentItem
 .app-page-section
 {
     margin: 1rem 0 2rem;
+}
+
+.image-inline
+{
+    width: 100%;
 }
 
 .app-styleguide
