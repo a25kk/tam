@@ -7,7 +7,7 @@
 .app-brand {
   display: flex;
   align-items: center;
-  width: $screen-xs;
+  width: 100%;
   margin-right: $padding-small-horizontal;
   &-panel-inverse {
     width: 100%;
@@ -44,7 +44,10 @@
 }
 
 .app-brandname-logo {
-  width: 400px;
+  width: 100%;
+  @media (min-width: $grid-float-breakpoint) {
+        width: 400px;
+     }
   //.app-brand-img-xs & {
   //  width: 32px;
   //}

@@ -8364,14 +8364,17 @@ a.label:focus
 }
 
 .clearfix:before,
-.clearfix:after
+.app-navbar-nav:before,
+.clearfix:after,
+.app-navbar-nav:after
 {
     display: table; 
 
     content: ' ';
 }
 
-.clearfix:after
+.clearfix:after,
+.app-navbar-nav:after
 {
     clear: both;
 }
@@ -9138,8 +9141,7 @@ div.riform .label
 {
     .app-header
     {
-        padding-bottom: 1rem; 
-        padding-left: 1.428571429rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -9167,12 +9169,6 @@ div.riform .label
 
 @media (min-width: 767px)
 {
-    .app-header-brandbar
-    {
-        -webkit-flex: 0 0 66.6666%;
-            -ms-flex: 0 0 66.6666%;
-                flex: 0 0 66.6666%;
-    }
     .app-header-actionbar
     {
         -webkit-flex: 0 0 33.3333%;
@@ -9183,113 +9179,48 @@ div.riform .label
 
 .app-navbar
 {
-    border-radius: 0; 
-    background-color: #274d38;
-}
-@media (min-width: 767px)
-{
-    .app-navbar
-    {
-        border-bottom: 10px solid #274d38; 
-        background: transparent;
-    }
-}
+    line-height: .9523809527rem;
 
-.app-navbar-header
-{
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
-
-    padding: 0;
-
-    background: #274d38; 
-
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-            align-items: center;
-}
-.app-navbar-header:before,
-.app-navbar-header:after
-{
-    display: table; 
-
-    content: ' ';
-}
-.app-navbar-header:after
-{
-    clear: both;
-}
-
-.app-navbar-header-title
-{
-    -webkit-flex: 0 0 75%;
-        -ms-flex: 0 0 75%;
-            flex: 0 0 75%;
-}
-
-.app-navbar-brand
-{
-    font-weight: 500;
-    line-height: 1.428571429rem;
-
-    height: 50px;
-    padding: 15px 15px;
-
-    color: #fff;
-}
-
-.app-navbar-header-toggle
-{
-    min-height: 50px;
-    padding: 15px 15px;
-
-    text-align: center; 
-
-    background: #588c73;
-
-    -webkit-flex: 0 0 25%;
-        -ms-flex: 0 0 25%;
-            flex: 0 0 25%;
+    min-height: 2.1428571435rem; 
+    margin-bottom: 0;
 }
 
 .app-navbar-toggle
 {
-    width: 100%;
-
-    text-align: right; 
-
-    border-color: transparent;
-    background: transparent;
+    border-color: transparent !important;
 }
 .app-navbar-toggle:hover,
 .app-navbar-toggle:focus
 {
-    border-color: transparent; 
-    background: transparent;
+    background-color: #ddd;
 }
 .app-navbar-toggle .icon-bar
 {
-    background-color: #fff;
+    background-color: #888;
 }
 .app-navbar-toggle .icon-bar
 {
     display: block;
 
-    width: 44px;
+    width: 30px;
     height: 2px;
 
     border-radius: 1px;
 }
 .app-navbar-toggle .icon-bar + .icon-bar
 {
-    margin-top: 12px;
+    margin-top: 8px;
 }
 
 .app-navbar-collapse
 {
     margin-right: -30px !important; 
     margin-left: -30px !important;
+}
+
+.app-navbar-brand
+{
+    padding: 0 30px;
 }
 
 .app-navbar-nav
@@ -9309,12 +9240,15 @@ div.riform .label
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-            justify-content: center;
+}
+@media (min-width: 767px)
+{
+    .app-navbar-nav
+    {
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
 }
 
 .app-navitem
@@ -9325,8 +9259,7 @@ div.riform .label
 {
     .app-navitem
     {
-        width: 16.66666667%;
-        padding-right: 2px;
+        width: auto;
     }
     .app-navitem:last-child
     {
@@ -9336,100 +9269,71 @@ div.riform .label
 
 .app-navitem-tab
 {
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1;
 
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display:         flex;
+    padding-right: .25rem;
+    padding-left: .25rem;
 
     transition: background-color .5s ease; 
-    text-align: center;
     text-transform: uppercase;
 
     color: #fff;
-    background-color: #274d38;
-
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-            align-items: center;
 }
 .app-navitem-tab:hover
 {
     text-decoration: none; 
 
-    color: #fff;
-    background-color: #1c3728;
+    color: #274d38;
+    background-color: transparent;
 }
 .app-navitem-tab > span
 {
     display: block;
 
     margin: 0 auto;
-    margin-top: 13.571428568px;
-    margin-bottom: 13.571428568px;
+    padding: 0 30px;
+}
+.active .app-navitem-tab
+{
+    color: #274d38;
 }
 @media (min-width: 767px)
 {
     .app-navitem-tab
     {
-        height: 70px;
-        min-height: 70px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display:         flex;
     }
 }
 
-.app-navitem-tab-home
+.app-navitem
 {
-    background-color: #274d38;
-}
-.app-navitem-tab-home:hover
-{
-    background-color: #1c3728;
+    background: transparent;
 }
 
-.app-navitem-tab-aktuelles
+@Lmedia (min-width: 767px)
 {
-    background-color: #588c73;
-}
-.app-navitem-tab-aktuelles:hover
-{
-    background-color: #4b7862;
-}
-
-.app-navitem-tab-verwaltung-und-politik
-{
-    background-color: #c7b450;
-}
-.app-navitem-tab-verwaltung-und-politik:hover
-{
-    background-color: #baa63c;
+    .app-navitem
+    {
+        background: url(../assets/img/dot.png) no-repeat right bottom transparent;
+    }
 }
 
-.app-navitem-tab-tourismus-und-wirtschaft
+#portaltab-kontakt-booking
 {
-    background-color: #588c73;
-}
-.app-navitem-tab-tourismus-und-wirtschaft:hover
-{
-    background-color: #4b7862;
+    background: transparent;
 }
 
-.app-navitem-tab-leben-im-landkreis
+.divider
 {
-    background-color: #8c4747;
-}
-.app-navitem-tab-leben-im-landkreis:hover
-{
-    background-color: #763c3c;
-}
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
 
-.app-navitem-tab-buergerportal-und-service
-{
-    background-color: #f2ae73;
-}
-.app-navitem-tab-buergerportal-und-service:hover
-{
-    background-color: #ef9c55;
+    color: #fff;
 }
 
 .app-footer
@@ -9898,7 +9802,7 @@ label
     display: -ms-flexbox;
     display:         flex;
 
-    width: 480px;
+    width: 100%;
     margin-right: .625rem; 
 
     -webkit-align-items: center;
@@ -9959,7 +9863,14 @@ label
 
 .app-brandname-logo
 {
-    width: 400px;
+    width: 100%;
+}
+@media (min-width: 768px)
+{
+    .app-brandname-logo
+    {
+        width: 400px;
+    }
 }
 
 .app-brandname

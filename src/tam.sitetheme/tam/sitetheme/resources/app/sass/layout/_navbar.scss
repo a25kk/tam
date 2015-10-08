@@ -4,71 +4,30 @@
 
 .app-navbar {
   @extend .navbar;
-  background-color: $app-primary;
-  border-radius: 0;
-  @media (min-width: $grid-float-breakpoint-max) {
-    background: transparent;
-    border-bottom: 10px solid $app-primary;
-  }
-}
-
-//== Navbar header
-//
-//## Default display of global site navigation
-//## Hidden on larger displays
-.app-navbar-header {
-  @include clearfix;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  background: $app-primary;
-}
-
-//** Navbar toggle text
-.app-navbar-header-title {
-  flex: 0 0 75%;
-}
-
-.app-navbar-brand {
-  height: $navbar-height;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal;
-  font-weight: 500;
-  line-height: $line-height-computed;
-  color: #fff;
-}
-
-//** Icon bar navigation toggle
-.app-navbar-header-toggle {
-  flex: 0 0 25%;
-  background: $app-secondary;
-  min-height: $navbar-height;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal;
-  text-align: center;
+  line-height: $line-height-computed / 1.5;
+  margin-bottom: 0;
+  min-height: $line-height-computed * 1.5;
 }
 
 // Navbar toggle button visible on small displays
 .app-navbar-toggle {
-  width: 100%;
-  border-color: transparent;
-  background: transparent;
-  text-align: right;
+  border-color: transparent !important;
   &:hover,
   &:focus {
-    background: transparent;
-    border-color: transparent;
+    background-color: $navbar-default-toggle-hover-bg;
   }
   .icon-bar {
-    background-color: $navbar-inverse-toggle-icon-bar-bg;
+    background-color: $navbar-default-toggle-icon-bar-bg;
   }
   // Bars
   .icon-bar {
     display: block;
-    width: 44px;
+    width: 30px;
     height: 2px;
     border-radius: 1px;
   }
   .icon-bar + .icon-bar {
-    margin-top: 12px;
+    margin-top: 8px;
   }
 }
 
@@ -77,17 +36,23 @@
   margin-right: -30px !important;
 }
 
+.app-navbar-brand {
+  padding: 0 30px;
+}
+
 // Unordered list main navigation
 .app-navbar-nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
   margin-bottom: 0;
   padding-left: 0; // Override default ul/ol
   list-style: none;
-  @extend clearfix;
+  @extend .clearfix;
+  @media (min-width: $grid-float-breakpoint-max) {
+    justify-content: space-between;
+  }
 }
 
 //== Navitems
@@ -96,8 +61,9 @@
 .app-navitem {
   width: 100%;
   @media (min-width: $grid-float-breakpoint-max) {
-    width: 16.66666667%;
-    padding-right: 2px;
+    //width: 16.66666667%;
+    width: auto;
+    //padding-right: 1rem;
     &:last-child {
       padding-right: 0;
     }
@@ -105,75 +71,50 @@
 }
 
 .app-navitem-tab {
-    display: flex;
-    align-items: center;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
     color: #fff;
-    background-color: $app-primary;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1;
     text-transform: uppercase;
-    text-align: center;
     transition: background-color 0.5s ease;
     &:hover {
-      color: #fff;
-      background-color: darken($app-primary, 6.5%);
+      color: $app-primary;
+      background-color: transparent;
       text-decoration: none;
     }
     > span {
       display: block;
       margin: 0 auto;
-      // padding: ((#{$navbar-height} - ($line-height-computed)) / 2) 0;
-      @include navbar-vertical-align($line-height-computed);
+      padding: 0 30px;
+    }
+    .active & {
+      color: $app-primary;
     }
     @media (min-width: $grid-float-breakpoint-max) {
-      height: 70px;
-      min-height: 70px;
+      display: flex;
+      //align-items: center;
+      //text-align: center;
     }
 }
 
-//== NOTE: this classes are subject to changes
-//
-//## we should move these to general purpose brand classes
-//## providing both color and background color mixins and
-//## standalone modifier classes
-.app-navitem-tab-home {
-  background-color: $app-primary;
-  &:hover {
-    background-color: darken($app-primary, 6.5%);
+.app-navitem {
+  background: transparent;
+
+@Lmedia(min-width:767px) {
+    background: url(../assets/img/dot.png) no-repeat right bottom transparent;
   }
 }
 
-.app-navitem-tab-aktuelles {
-  background-color: $app-current;
-  &:hover {
-    background-color: darken($app-current, 6.5%);
-  }
+
+#portaltab-kontakt-booking {
+  background: transparent;
 }
 
-.app-navitem-tab-verwaltung-und-politik {
-  background-color: $app-administration;
-  &:hover {
-    background-color: darken($app-administration, 6.5%);
-  }
-}
-
-.app-navitem-tab-tourismus-und-wirtschaft {
-  background-color: $app-economy;
-  &:hover {
-    background-color: darken($app-economy, 6.5%);
-  }
-}
-
-.app-navitem-tab-leben-im-landkreis {
-  background-color: $app-county;
-  &:hover {
-    background-color: darken($app-county, 6.5%);
-  }
-}
-
-.app-navitem-tab-buergerportal-und-service {
-  background-color: $app-service;
-  &:hover {
-    background-color: darken($app-service, 6.5%);
-  }
+.divider {
+    padding-bottom: 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    color: #fff;
 }
