@@ -3,6 +3,11 @@
 // --------------------------------------
 
 
+.app-wrapper {
+  background: url(../assets/img/bg.gif) repeat-x top center transparent;
+}
+
+
 //== Main content area
 //
 //## Provides optional fullscreen layouts
@@ -29,7 +34,10 @@
 //
 //## Define content specific styles
 .app-page {
-  padding: $line-height-computed 0;
+  padding: $line-height-computed;
+  @extend .container;
+  background: #fff;
+  border-radius: $border-radius-large;
 }
 
 .app-page-title {

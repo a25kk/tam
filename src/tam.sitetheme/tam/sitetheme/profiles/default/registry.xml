@@ -2,7 +2,7 @@
 <registry>
   <records prefix="plone.resources/tam.sitetheme"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js">++theme++tam.sitetheme/dist/js/main.js</value>
+    <value key="js">++theme++tam.sitetheme/dist/scripts/main.js</value>
     <value key="deps">jquery</value>
   </records>
   <records prefix="plone.bundles/tam.sitetheme"
@@ -11,7 +11,7 @@
     <element>tam.sitetheme</element>
   </value>
   <value key="enabled">True</value>
-  <value key="jscompilation">++theme++tam.sitetheme/dist/js/main-compiled.min.js</value>
+  <value key="jscompilation">++theme++tam.sitetheme/dist/scripts/main-compiled.min.js</value>
   <value key="last_compilation">2015-02-06 00:00:00</value>
 </records>
 </registry>
