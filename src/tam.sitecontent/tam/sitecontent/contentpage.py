@@ -2,7 +2,7 @@
 """Module providing ContentPage content type functionality"""
 
 from plone.dexterity.content import Container
-from plone.directives import form
+from plone.supermodel import model
 from plone.namedfile.interfaces import IImageScaleTraversable
 from zope.interface import implementer
 
