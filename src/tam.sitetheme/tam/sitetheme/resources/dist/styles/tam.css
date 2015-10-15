@@ -10115,12 +10115,17 @@ fieldset[disabled] .app-searchbox-btn.active
 
 .app-bannerbar
 {
+    border: 1px solid red; 
     background: transparent;
 }
 
 .app-banner
 {
     position: relative;
+
+    min-height: 430px;
+
+    border: 1px solid red;
 }
 
 .app-banner-item

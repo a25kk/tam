@@ -5,11 +5,12 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="tam.sitecontent">
+    i18n_domain="ck.sitecontent">
 
     <!-- Include configuration for dependencies listed in setup.py -->
     <includeDependencies package="." />
 
+    <include package=".behaviors" />
     <include package=".browser" />
 
     <!-- Register locales directory -->
@@ -18,9 +19,9 @@
     <!-- Register the installation GenericSetup extension profile -->
     <genericsetup:registerProfile
         name="default"
-        title="tam.sitecontent"
+        title="ck.sitecontent"
         directory="profiles/default"
-        description="Extension profile for tam.sitecontent."
+        description="Extension profile for ck.sitecontent."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 

@@ -92,7 +92,7 @@
                 css:if-not-content="#app-banner" />
 
         <replace css:content="#app-banner"
-                css:theme="#app-bannerbar"
+                css:theme="#app-banner"
                 css:if-content="#app-banner" />
 
         <drop css:theme="#app-banner"

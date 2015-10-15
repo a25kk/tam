@@ -13,4 +13,14 @@
       layer="..interfaces.ITamSitecontentLayer"
       />
 
+  <!-- Content page image gallery -->
+  <browser:page
+      for="tam.sitecontent.contentpage.IContentPage"
+      name="gallery-view"
+      class=".contentpage.GalleryView"
+      template="galleryview.pt"
+      permission="zope2.View"
+      layer="..interfaces.ITamSitecontentLayer"
+      />
+
 </configure>
