@@ -3,7 +3,7 @@
 // -----------------------------------------
 
 .app-navbar {
-  @extend .navbar;
+  @extend.navbar;
   line-height: $line-height-computed / 1.5;
   margin-bottom: 0;
   min-height: $line-height-computed * 1.5;
@@ -36,79 +36,81 @@
   margin-right: -30px !important;
 }
 
-.app-navbar-brand {
-  padding: 0 30px;
-}
-
 // Unordered list main navigation
 .app-navbar-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0;
-  padding-left: 0; // Override default ul/ol
+  padding: 0 $line-height-computed;
   list-style: none;
-  @extend .clearfix;
+  @media (min-width: $screen-sm-min) {
+    padding: 0 $line-height-computed;
+  }
+  @media (min-width: $screen-sm-min) {
+    padding: 0;
+  }
+  @extend.clearfix;
   @media (min-width: $grid-float-breakpoint-max) {
     justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 //== Navitems
 //
 //## Color coded based on addon classes
-.app-navitem {
-  //width: 100%;
+.app-navbar-nav li {
+  width: 100%;
   @media (min-width: $grid-float-breakpoint-max) {
-    width: 16.66666667%;
     width: auto;
-    //padding-right: 1rem;
+    background: transparent url("../assets/img/dot.png") no-repeat scroll right 22px;
     &:last-child {
       padding-right: 0;
     }
   }
 }
 
-.app-navitem-tab {
-    padding-right: 0.25rem;
-    padding-left: 0.25rem;
-    color: #fff;
-    font-weight: 300;
-    line-height: 1;
+#portaltab-fuehrungsfeedback {
+  background: transparent;
+}
+
+.app-navbar-nav li a {
+    padding-right: 1rem;
+    padding-left: 0.7rem;
+    color: $app-blue-primary;
+    font-size: $font-size-base / 1.05;
     text-transform: uppercase;
+    @media only screen 
+      and (min-device-width : 768px) 
+      and (max-device-width : 1024px) 
+      and (orientation : landscape) { font-size: $font-size-base / 1.5; }
+      
+    font-weight: 500;
+    line-height: 1;
     transition: background-color 0.5s ease;
     &:hover {
-      color: $app-primary;
+      color: $app-primary-base;
       background-color: transparent;
       text-decoration: none;
     }
     > span {
       display: block;
       margin: 0 auto;
-      padding: 0 30px;
-    }
-    .active & {
-      color: $app-primary;
+      padding: 0;
     }
     @media (min-width: $grid-float-breakpoint-max) {
       display: flex;
-      align-items: center;
-      text-align: center;
+      //align-items: center;
+      //text-align: center;
     }
 }
 
-.app-navitem {
-  background: transparent;
-
-@Lmedia(min-width:767px) {
-    background: url(../assets/img/dot.png) no-repeat right bottom transparent;
-  }
-}
-
-
-#portaltab-kontakt-booking {
-  background: transparent;
+.app-navbar-nav  > .selected > a,
+.app-navbar-nav  > .selected > a:focus,
+.app-navbar-nav  > .selected > a:hover {
+    background-color: transparent;
+    color: $app-primary-base !important;
 }
 
 .divider {
@@ -116,5 +118,5 @@
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    color: #fff;
+    color: #333;
 }

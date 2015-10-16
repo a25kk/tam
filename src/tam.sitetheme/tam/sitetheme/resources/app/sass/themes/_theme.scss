@@ -4,7 +4,9 @@
 
 
 .app-wrapper {
-  background: url(../assets/img/bg.gif) repeat-x top center transparent;
+  @media (min-width: $screen-md-min) {
+    background: url(../assets/img/bg.gif) repeat-x top center transparent;
+  }
 }
 
 .app-outer-contentwrapper {
@@ -16,7 +18,7 @@
   //display: flex;
   //align-items: left;
   background: #fff;
-  border-radius: $border-radius-large;
+  border-radius: $border-radius-base;
 }
 
 .app-aside {
