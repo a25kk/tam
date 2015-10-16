@@ -9,7 +9,7 @@ from zope.interface import implementer
 from tam.sitecontent import MessageFactory as _
 
 
-class IContentPage(form.Schema, IImageScaleTraversable):
+class IContentPage(model.Schema, IImageScaleTraversable):
     """
     A folderish page
     """

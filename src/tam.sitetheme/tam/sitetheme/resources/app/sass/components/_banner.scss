@@ -6,7 +6,6 @@
 .app-bannerbar {
   //background: $app-primary;
   background: transparent;
-  border: 1px solid red;
 }
 
 //== Banner container
@@ -15,8 +14,9 @@
 .app-banner {
   @extend .container;
   position: relative;
-	min-height: 430px;
-  border: 1px solid red;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  padding: 0;
 }
 
 //== Single banner item
@@ -26,7 +26,8 @@
 .app-banner-item {
   position: relative;
   height: 100%;
-  min-height: 430px;
+  min-height: 320px;
+  width: 100%;
 }
 
 //** Banner caption
@@ -47,4 +48,8 @@
 .app-banner-item-title {
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.flickity-page-dots {
+    bottom: -43px;
 }
