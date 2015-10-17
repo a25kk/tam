@@ -19,10 +19,15 @@
   //align-items: left;
   background: #fff;
   border-radius: $border-radius-base;
+  margin-bottom: 2rem;
 }
 
 .app-aside {
-  @extend .col-sm-3;
+  @extend .col-sm-4;
+  @media (min-width: $screen-md-min) {
+    padding-left: 2rem;
+  }
+
 }
 
 
@@ -30,12 +35,20 @@
 //
 //## Provides optional fullscreen layouts
 .app-main {
-  @extend .col-sm-9;
-  //&-fullscreen {
-  //  display: flex;
-  //  align-items: center;
-  //  justify-content: center;
-  //}
+  @extend .col-sm-8;
+  &-fullscreen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.app-main-login {
+  @extend .container;
+  text-align: center;
+  .app-brandname-logo {
+    margin: 2rem auto;
+  }
 }
 
 .app-content {
@@ -90,5 +103,6 @@
 
 .image-inline {
   @extend .img-responsive;
-  width: 100%
+  width: 100%;
+  border-radius: $border-radius-base;
 }

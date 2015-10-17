@@ -9,7 +9,7 @@
     font-size: ($font-size-base * 1.2);
     font-weight: 700;
     background: $app-gray;
-    color: #fff;
+    color: $app-primary;
     padding: ($line-height-computed / 2) $line-height-computed;
     margin: 0;
 }

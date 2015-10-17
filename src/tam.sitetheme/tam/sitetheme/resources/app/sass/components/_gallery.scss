@@ -1,0 +1,47 @@
+//
+// Gallery
+// -----------------------------------
+
+
+.app-page-gallery {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  .flickity-page-dots {
+  display: none;
+  }
+}
+
+.app-gallery {
+  position: relative;
+  height: 520px !important;
+  min-height: 520px !important;
+  overflow: hidden;
+}
+
+.app-gallery-cell {
+  width: 100%; /* full width */
+  height: 520px !important; /* height of gallery */
+  top: 0;
+  margin-right: 10px;
+
+  img {
+  	@extend .img-responsive;
+    width: 100%;
+  }
+}
+
+.main-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 520px !important;
+  min-height: 520px !important;
+}
+
+//== Page image gallery
+//
+//## Base styles for project page image galleries
+//## Most of the styling is provided by the flickity.css
+//## imported into the main project css file
