@@ -12911,6 +12911,25 @@ body.section-front-page .app-pathbar
     }
 }
 
+.app-page-body ul
+{
+    padding-left: .5rem;
+}
+
+.app-page-body li:before
+{
+    content: '\b7\a0';
+    /* \b7 is a middot, \a0 is a space */
+}
+
+.app-page-body li
+{
+    list-style: none;
+
+    text-indent: -.5em;
+    /* helps make it look more like it's a bullet. */
+}
+
 .app-page-section
 {
     margin: 1rem 0 2rem;
