@@ -10500,12 +10500,35 @@ fieldset[disabled] .app-searchbox-btn.active
     border-radius: 5px;
 }
 
+.app-banner-item-content
+{
+    position: absolute;
+    bottom: 0;
+    left: 0rem;
+
+    width: 100%;
+    padding: 1rem 2rem;
+
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+30,000000+58&amp;0+0,0.65+100 */
+    /* FF3.6+ */
+    /* Chrome,Safari4+ */
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .2) 30%, rgba(0, 0, 0, .38) 58%, rgba(0, 0, 0, .65) 100%);
+    /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    /* IE6-9 */
+}
+
 .app-banner-item-caption
 {
     line-height: 1.25;
 
     position: absolute;
-    top: 66%;
+    bottom: 0;
     left: 0;
 
     padding-right: 1rem;
