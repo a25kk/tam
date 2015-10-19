@@ -5,13 +5,22 @@
 .app-navbar {
   @extend.navbar;
   line-height: $line-height-computed / 1.5;
-  margin-bottom: 0;
   min-height: $line-height-computed * 1.5;
+  margin-bottom: 0;
+  border: 1px solid $app-gray;
+  border-radius: $border-radius-base;
+  @media (min-width: $screen-sm-min) {
+    border: 0;
+    border-radius: $border-radius-base;
+  }
+
 }
+
+
 
 // Navbar toggle button visible on small displays
 .app-navbar-toggle {
-  border-color: transparent !important;
+  border-color: $app-gray;
   &:hover,
   &:focus {
     background-color: $navbar-default-toggle-hover-bg;
@@ -119,4 +128,4 @@
     padding-left: 0;
     padding-right: 0;
     color: #333;
-}
+}//

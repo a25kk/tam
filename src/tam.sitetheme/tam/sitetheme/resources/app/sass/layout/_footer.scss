@@ -13,6 +13,10 @@
 .app-footer-content {
   @extend .container;
   font-weight: 400;
+  padding: 0 2rem !important;
+  @media (min-width: $grid-float-breakpoint-max) {
+      padding: 0 !important;
+    }
   a {
     text-transform: uppercase;
     color: $app-blue-primary;

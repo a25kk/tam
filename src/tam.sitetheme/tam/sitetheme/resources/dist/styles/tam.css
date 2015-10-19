@@ -10762,13 +10762,24 @@ div.riform .label
 {
     line-height: .9523809527rem;
 
-    min-height: 2.1428571435rem; 
+    min-height: 2.1428571435rem;
     margin-bottom: 0;
+
+    border: 1px solid #edeaea;
+    border-radius: 5px;
+}
+@media (min-width: 768px)
+{
+    .app-navbar
+    {
+        border: 0;
+        border-radius: 5px;
+    }
 }
 
 .app-navbar-toggle
 {
-    border-color: transparent !important;
+    border-color: #edeaea;
 }
 .app-navbar-toggle:hover,
 .app-navbar-toggle:focus
@@ -10944,6 +10955,15 @@ div.riform .label
 .app-footer-content
 {
     font-weight: 400;
+
+    padding: 0 2rem !important;
+}
+@media (min-width: 767px)
+{
+    .app-footer-content
+    {
+        padding: 0 !important;
+    }
 }
 .app-footer-content a
 {
@@ -12210,7 +12230,8 @@ fieldset[disabled] .app-searchbox-btn.active
 /* Portlets specific styles */
 .portlet
 {
-    margin: 0 !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important; 
 
     background: #fff;
 }
@@ -12378,14 +12399,6 @@ span.portletItemDetails
     padding: 0 0 0 0;
 }
 
-.section-gruendach .portletStaticText p
-{
-    line-height: 1.428571429rem;
-
-    margin-bottom: .7142857145rem; 
-    padding: 0 1.428571429rem 0 1.428571429rem !important;
-}
-
 .portletStaticText ul
 {
     margin: .5em 0 0 1.5em; 
@@ -12405,8 +12418,6 @@ span.portletItemDetails
     line-height: 1em;
 
     width: 100%; 
-    margin-top: 1.428571429rem !important;
-    margin-bottom: 1.428571429rem !important;
 
     list-style: none !important;
     list-style-image: none !important;
@@ -12453,12 +12464,20 @@ dd.portletItem .navTreeItem a
     display: block;
 
     margin: 0;
-    padding: 5px 0 4px 0 !important;
+    padding: 5px 0 4px 20px !important;
 
     text-align: left;
     text-decoration: none;
 
     border-bottom: 1px solid #edeaea !important;
+}
+@media (min-width: 767px)
+{
+    .navTreeItem a,
+    dd.portletItem .navTreeItem a
+    {
+        padding: 5px 0 4px 0 !important;
+    }
 }
 
 .navTreeItem a
