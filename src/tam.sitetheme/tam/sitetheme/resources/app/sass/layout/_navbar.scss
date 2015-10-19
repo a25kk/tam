@@ -71,22 +71,24 @@
 //## Color coded based on addon classes
 .app-navbar-nav li {
   width: 100%;
+  padding-top: 1rem;
   @media (min-width: $grid-float-breakpoint-max) {
+    padding-top: 0;
     width: auto;
-    background: transparent url("../assets/img/dot.png") no-repeat scroll right 22px;
+    background: transparent url("../assets/img/dot.png") no-repeat scroll right 7px;
     &:last-child {
       padding-right: 0;
     }
   }
 }
 
-#portaltab-fuehrungsfeedback {
+#portaltab-kontakt {
   background: transparent;
 }
 
 .app-navbar-nav li a {
-    padding-right: 1rem;
-    padding-left: 0.7rem;
+    padding-right: 1.4rem;
+    padding-left: 0;
     color: $app-blue-primary;
     font-size: $font-size-base / 1.05;
     text-transform: uppercase;
@@ -120,6 +122,10 @@
 .app-navbar-nav  > .selected > a:hover {
     background-color: transparent;
     color: $app-primary-base !important;
+}
+
+.app-navitem-tab-meisterlich-fuehren {
+  padding-left: 0 !important;
 }
 
 .divider {

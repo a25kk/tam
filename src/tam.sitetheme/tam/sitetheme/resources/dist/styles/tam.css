@@ -10608,14 +10608,16 @@ div.riform .label
 .app-navbar-nav li
 {
     width: 100%;
+    padding-top: 1rem;
 }
 @media (min-width: 767px)
 {
     .app-navbar-nav li
     {
         width: auto;
+        padding-top: 0;
 
-        background: transparent url('../assets/img/dot.png') no-repeat scroll right 22px;
+        background: transparent url('../assets/img/dot.png') no-repeat scroll right 7px;
     }
     .app-navbar-nav li:last-child
     {
@@ -10623,7 +10625,7 @@ div.riform .label
     }
 }
 
-#portaltab-fuehrungsfeedback
+#portaltab-kontakt
 {
     background: transparent;
 }
@@ -10634,8 +10636,8 @@ div.riform .label
     font-weight: 500;
     line-height: 1;
 
-    padding-right: 1rem;
-    padding-left: .7rem;
+    padding-right: 1.4rem;
+    padding-left: 0;
 
     transition: background-color .5s ease; 
     text-transform: uppercase;
@@ -10679,6 +10681,11 @@ div.riform .label
 {
     color: #274d38 !important; 
     background-color: transparent;
+}
+
+.app-navitem-tab-meisterlich-fuehren
+{
+    padding-left: 0 !important;
 }
 
 .divider
@@ -11981,7 +11988,7 @@ fieldset[disabled] .app-searchbox-btn.active
 .portlet
 {
     padding-top: 2rem !important;
-    padding-bottom: 2rem !important; 
+    padding-bottom: 3rem !important; 
 
     background: #fff;
 }
