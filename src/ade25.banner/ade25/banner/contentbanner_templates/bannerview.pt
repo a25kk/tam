@@ -1,4 +1,4 @@
-<div class="app-banner-item item show"
+<div class="app-banner-item item show dim-in dim-in-3"
     tal:condition="view/show_gallery"
     tal:define="is_active view/is_first_banner;
                 base_class string:app-banner-item app-banner-item-${view/banner_position} app-banner-item-lazy owl-lazy"
