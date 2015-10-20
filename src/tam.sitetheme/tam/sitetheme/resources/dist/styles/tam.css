@@ -12945,6 +12945,11 @@ body.section-front-page .app-pathbar
     }
 }
 
+.section-kontakt .app-outer-contentwrapper
+{
+    margin-top: 1rem;
+}
+
 .app-inner-contentwrapper
 {
     margin-bottom: 2rem; 

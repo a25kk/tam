@@ -13,6 +13,11 @@
   @extend .container;
 }
 
+.section-kontakt .app-outer-contentwrapper {
+  margin-top: 1rem;
+
+}
+
 .app-inner-contentwrapper {
   @extend .row;
   //display: flex;
