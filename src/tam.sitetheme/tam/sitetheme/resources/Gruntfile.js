@@ -36,12 +36,8 @@ module.exports = function (grunt) {
                   'bower_components/mailcheck/src/mailcheck.js',
                   'bower_components/JVFloat/jvfloat.js',
                   'bower_components/hideShowPassword/hideShowPassword.js',
-                  'bower_components/lazysizes/plugins/ls.parent-fit.js',
-                  'bower_components/lazysizes/plugins/ls.bgset.js',
-                  'bower_components/lazysizes/plugins/ls.unveilhooks.js',
-                  'bower_components/lazysizes/lazysizes.js',
                   'bower_components/respimage/respimage.js',
-                  'bower_components/flickity/dist/flickity.pkgd.js',
+                  'bower_components/owl.carousel/dist/owl.carousel.js',
                   '<%= config.app %>/js/main.js'
                 ],
                 dest: '<%= config.dist %>/scripts/<%= pkg.name %>.js'
@@ -49,12 +45,8 @@ module.exports = function (grunt) {
             theme: {
                 src: [
                     'bower_components/bootstrap/dist/js/bootstrap.js',
-                    'bower_components/lazysizes/plugins/ls.parent-fit.js',
-                    'bower_components/lazysizes/plugins/ls.bgset.js',
-                    'bower_components/lazysizes/plugins/ls.unveilhooks.js',
-                    'bower_components/lazysizes/lazysizes.js',
                     'bower_components/respimage/respimage.js',
-                    'bower_components/flickity/dist/flickity.pkgd.js',
+                    'bower_components/owl.carousel/dist/owl.carousel.js',
                     '<%= config.app %>/js/main.js'
                 ],
                 dest: '<%= config.dist %>/scripts/main.js'

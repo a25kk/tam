@@ -14,7 +14,8 @@
     "responsive-nav": "1.0.39",
     "bootstrap-sass": "~3.3.4",
     "flickity": "~1.0.2",
-    "respimage": "git@github.com:aFarkas/respimage.git#master"
+    "respimage": "git@github.com:aFarkas/respimage.git#master",
+    "owl.carousel": "*"
   },
   "devDependencies": {
     "chai": "1.7.2"

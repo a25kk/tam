@@ -1,22 +1,20 @@
 //
-// Banner
-// -----------------------------------------
+// Content banner and carousel
+// ---------------------------
 
-//** Fullscreen container bar
-.app-bannerbar {
-  //background: $app-primary;
-  background: transparent;
+.app-banner {
+    @extend.container;
+    height: 320px;
+    min-height: 320px;
+    background: transparent;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
-//== Banner container
-//
-//## Uses a container mixin for responsive sizing
-.app-banner {
-  @extend .container;
-  position: relative;
-  margin-top: 0.5rem;
-  margin-bottom: 3rem;
-  padding: 0;
+.app-banner-image {
+  @extend.img-responsive;
 }
 
 //== Single banner item
@@ -29,9 +27,9 @@
   min-height: 320px;
   width: 100%;
   border-radius: $border-radius-base;
+  background-size: cover;
+  background-position: top center;
 }
-
-//** Banner caption
 
 .app-banner-item-content {
   position: absolute;
@@ -40,6 +38,8 @@
   width: 100%;
   padding: 1rem 2rem;
   color: #fff;
+  min-height: 100px;
+  border-radius: $border-radius-base;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+30,000000+58&amp;0+0,0.65+100 */
   background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0.38) 58%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(30%,rgba(0,0,0,0.2)), color-stop(58%,rgba(0,0,0,0.38)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
@@ -50,25 +50,69 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 
 }
-.app-banner-item-caption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 1.25;
-  color: $gray-lighter;
-  a {
-    color: $gray-lighter;
-    text-decoration: underline;
-  }
+
+.app-banner-item-body {
+    color: #fff;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-.app-banner-item-title {
-  font-size: 1.5rem;
+.app-baner-item-title {
+  font-size: 1.4rem;
   font-weight: 500;
 }
 
 .flickity-page-dots {
-    bottom: -43px;
+    @media (min-width: $screen-sm-min) {
+        text-align: right;
+        bottom: -43px;
+    }
 }
+
+.owl-carousel .owl-dot, .owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+    cursor: pointer;
+    -moz-user-select: none;
+    display: inline;
+}
+
+  // Styling dots
+  .owl-nav.disabled + .owl-dots {
+    margin-top: 10px;
+  }
+
+  .owl-nav {
+    display: none;
+  }
+  .owl-dots {
+    margin-top: 1.5rem !important;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: $dot-width;
+        height: $dot-height;
+        margin: $dot-margin;
+        background: $dot-background;
+        display: block;
+        -webkit-backface-visibility: visible;
+        @include transition(opacity, 200ms, ease);
+        @include rounded($dot-rounded);
+      }
+
+      &.active,
+      &:hover {
+        span {
+          background: $dot-background-active;
+        }
+      }
+    }
+  }
+
+

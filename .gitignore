@@ -32,7 +32,8 @@ pip*
 secret.cfg
 src/Plone
 src/Products.*
-src/ade25.*
+src/ade25.fabfiles
+src/ade25.toolbar
 src/archetypes.*
 src/bobtemplates.*
 src/collective.*
@@ -46,3 +47,4 @@ src/watchdog
 src/yapf
 src/z3c.*
 var
+.DS_Store

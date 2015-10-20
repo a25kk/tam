@@ -3723,6 +3723,7 @@ img
 }
 
 .img-responsive,
+.app-banner-image,
 .app-gallery-cell img,
 .image-inline
 {
@@ -10033,6 +10034,287 @@ http://flickity.metafizzy.co
     filter: alpha(opacity=100);
 }
 
+/* 
+ *  Core Owl Carousel CSS File
+ */
+.owl-carousel
+{
+    /* position relative and z-index fix webkit rendering fonts issue */
+    position: relative;
+    z-index: 1; 
+
+    width: 100%;
+
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-carousel .owl-stage
+{
+    position: relative;
+
+    -ms-touch-action: pan-Y;
+}
+.owl-carousel .owl-stage:after
+{
+    line-height: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0; 
+
+    content: '.';
+}
+.owl-carousel .owl-stage-outer
+{
+    position: relative;
+
+    overflow: hidden;
+    /* fix for flashing background */
+
+    -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-item
+{
+    position: relative;
+
+    float: left;
+
+    min-height: 1px;
+
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+.owl-carousel .owl-item img
+{
+    display: block;
+
+    width: 100%;
+
+    -webkit-transform-style: preserve-3d;
+}
+.owl-carousel .owl-nav.disabled,
+.owl-carousel .owl-dots.disabled
+{
+    display: none;
+}
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-dot
+{
+    cursor: pointer;
+    cursor: hand;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
+
+     -khtml-user-select: none;
+}
+.owl-carousel.owl-loaded
+{
+    display: block;
+}
+.owl-carousel.owl-loading
+{
+    display: block; 
+
+    opacity: 0;
+}
+.owl-carousel.owl-hidden
+{
+    opacity: 0;
+}
+.owl-carousel.owl-refresh .owl-item
+{
+    display: none;
+}
+.owl-carousel.owl-drag .owl-item
+{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.owl-carousel.owl-grab
+{
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor:      -o-grab;
+    cursor:     -ms-grab;
+    cursor:         grab;
+}
+.owl-carousel.owl-rtl
+{
+    direction: rtl;
+}
+.owl-carousel.owl-rtl .owl-item
+{
+    float: right;
+}
+
+/* No Js */
+.no-js .owl-carousel
+{
+    display: block;
+}
+
+/* 
+ * 	Default theme - Owl Carousel CSS File
+ */
+.owl-theme .owl-nav
+{
+    margin-top: 10px;
+
+    text-align: center;
+
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-nav [class*='owl-']
+{
+    font-size: 14px;
+
+    display: inline-block;
+
+    margin: 5px;
+    padding: 4px 7px;
+
+    cursor: pointer;
+
+    color: #fff;
+    border-radius: 3px; 
+    background: #d6d6d6;
+}
+.owl-theme .owl-nav [class*='owl-']:hover
+{
+    text-decoration: none; 
+
+    color: #fff;
+    background: #869791;
+}
+.owl-theme .owl-nav .disabled
+{
+    cursor: default; 
+
+    opacity: .5;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots
+{
+    margin-top: 10px;
+}
+
+.owl-theme .owl-dots
+{
+    text-align: center;
+
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-theme .owl-dots .owl-dot
+{
+    display: inline-block;
+    zoom: 1;
+
+    *display: inline;
+}
+.owl-theme .owl-dots .owl-dot span
+{
+    display: block;
+
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+
+    transition: opacity 200ms ease;
+
+    border-radius: 30px; 
+    background: #d6d6d6;
+
+    -webkit-backface-visibility: visible;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span
+{
+    background: #869791;
+}
+
+/* 
+ *  Owl Carousel - Animate Plugin
+ */
+.owl-carousel .animated
+{
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.owl-carousel .owl-animated-in
+{
+    z-index: 0;
+}
+
+.owl-carousel .owl-animated-out
+{
+    z-index: 1;
+}
+
+.owl-carousel .fadeOut
+{
+    -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+}
+
+@-webkit-keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut
+{
+    0%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+/* 
+ * 	Owl Carousel - Lazy Load Plugin
+ */
+.owl-carousel .owl-item .owl-lazy
+{
+    transition: opacity 400ms ease; 
+
+    opacity: 0;
+}
+
+.owl-carousel .owl-item img
+{
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+/* 
+ * 	Owl Carousel - Auto Height Plugin
+ */
+.owl-height
+{
+    transition: height 500ms ease-in-out;
+}
+
 .animated
 {
     -webkit-animation-duration: 1s;
@@ -11737,18 +12019,16 @@ fieldset[disabled] .app-searchbox-btn.active
     background-color: #fff;
 }
 
-.app-bannerbar
-{
-    background: transparent;
-}
-
 .app-banner
 {
-    position: relative;
+    height: 320px;
+    min-height: 320px;
+    margin-top: 1rem;
+    margin-bottom: 3rem; 
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 
-    margin-top: .5rem;
-    margin-bottom: 3rem;
-    padding: 0;
+    background: transparent;
 }
 
 .app-banner-item
@@ -11760,6 +12040,8 @@ fieldset[disabled] .app-searchbox-btn.active
     min-height: 320px;
 
     border-radius: 5px;
+    background-position: top center; 
+    background-size: cover;
 }
 
 .app-banner-item-content
@@ -11769,9 +12051,11 @@ fieldset[disabled] .app-searchbox-btn.active
     left: 0rem;
 
     width: 100%;
+    min-height: 100px;
     padding: 1rem 2rem;
 
     color: #fff;
+    border-radius: 5px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+30,000000+58&amp;0+0,0.65+100 */
     /* FF3.6+ */
     /* Chrome,Safari4+ */
@@ -11785,35 +12069,87 @@ fieldset[disabled] .app-searchbox-btn.active
     /* IE6-9 */
 }
 
-.app-banner-item-caption
+.app-banner-item-body
 {
-    line-height: 1.25;
-
     position: absolute;
     bottom: 0;
-    left: 0;
 
-    padding-right: 1rem;
-    padding-left: 1rem;
+    width: 100%; 
+    padding: 0;
 
-    color: #eee;
-}
-.app-banner-item-caption a
-{
-    text-decoration: underline; 
-
-    color: #eee;
+    color: #fff;
 }
 
-.app-banner-item-title
+.app-baner-item-title
 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 
-.flickity-page-dots
+@media (min-width: 768px)
 {
-    bottom: -43px;
+    .flickity-page-dots
+    {
+        bottom: -43px; 
+
+        text-align: right;
+    }
+}
+
+.owl-carousel .owl-dot,
+.owl-carousel .owl-nav .owl-next,
+.owl-carousel .owl-nav .owl-prev
+{
+    display: inline; 
+
+    cursor: pointer;
+    -moz-user-select: none;
+}
+
+.owl-nav.disabled + .owl-dots
+{
+    margin-top: 10px;
+}
+
+.owl-nav
+{
+    display: none;
+}
+
+.owl-dots
+{
+    margin-top: 1.5rem !important;
+
+    text-align: center;
+
+    -webkit-tap-highlight-color: transparent;
+}
+.owl-dots .owl-dot
+{
+    display: inline-block;
+    zoom: 1;
+
+    *display: inline;
+}
+.owl-dots .owl-dot span
+{
+    display: block;
+
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+
+    transition: opacity 200ms ease;
+
+    border-radius: 30px; 
+    background: #d6d6d6;
+
+    -webkit-backface-visibility: visible;
+}
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span
+{
+    background: #869791;
 }
 
 .app-page-gallery
@@ -12703,5 +13039,14 @@ body.section-front-page .app-pathbar
     width: 100%;
 
     border-radius: 5px;
+}
+
+.highlight
+{
+    padding: 2rem;
+
+    text-align: center; 
+
+    background: #ccc;
 }
 /*# sourceMappingURL=tam.css.map */
