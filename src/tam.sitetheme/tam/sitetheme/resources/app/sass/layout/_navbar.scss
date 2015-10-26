@@ -76,10 +76,23 @@
     padding-right: 1.4rem;
     padding-left: 0.8rem;
     width: auto;
+    background: transparent;
+    &:last-child {
+      padding-right: 0;
+    }
+    }
+
+
+    @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-right: 1.4rem;
+    padding-left: 0.8rem;
+    width: auto;
     background: transparent url("../assets/img/dot.png") no-repeat scroll right 7px;
     &:last-child {
       padding-right: 0;
     }
+
   }
 }
 
@@ -92,10 +105,16 @@
     color: $app-blue-primary;
     font-size: $font-size-base;
     text-transform: uppercase;
+
     @include media-breakpoint-up(md) {
     font-weight: 500;
     line-height: 1;
     transition: background-color 0.5s ease;
+
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-base / 2;
+    }
+
     &:hover {
       color: $app-primary-base;
       background-color: transparent;

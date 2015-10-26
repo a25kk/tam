@@ -4,13 +4,15 @@
 
 
 .app-wrapper {
-  @include media-breakpoint-up(md) {
+  background: transparent;
+  @include media-breakpoint-up(lg) {
     background: url(../assets/img/bg.gif) repeat-x top center transparent;
   }
 }
 
 .app-outer-contentwrapper {
   @extend .container;
+  border-radius: $border-radius-sm;
 }
 
 .section-kontakt .app-outer-contentwrapper {
@@ -20,7 +22,6 @@
 
 .app-inner-contentwrapper {
   @include make-row();
-  border: 1px solid blue;
   //display: flex;
   //align-items: left;
   background: #fff;
@@ -32,12 +33,14 @@
 
 .app-aside {
   @include make-col-span(12);
+  border-radius: $border-radius-sm;
   @include media-breakpoint-up(md) {
     @include make-col-span(4);
   }
 
   .card {
     border: 0;
+    border-radius: $border-radius-sm;
   }
 
   .card-header {
@@ -51,12 +54,15 @@
 //
 //## Provides optional fullscreen layouts
 .app-main {
-  @include make-col-span(8);
+  @include make-col-span(12);
+  @include media-breakpoint-up(md) {
+    @include make-col-span(8);
   &-fullscreen {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+    }
+  } 
 }
 
 .app-main-login {
@@ -130,7 +136,7 @@
 }
 
 .highlight {
-  background: #ccc;
+  background: #CAE1FF;
   padding: 2rem;
   text-align: center;
 }

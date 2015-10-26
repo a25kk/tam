@@ -9,8 +9,11 @@
     background: transparent;
     padding-left: 0px !important;
     padding-right: 0px !important;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     margin-bottom: 3rem;
+    @include media-breakpoint-down(xs) {
+      display: none;
+    }
 }
 
 .app-banner-image {
@@ -109,7 +112,7 @@
       &.active,
       &:hover {
         span {
-          background: $dot-background-active;
+          background: #05517D;
         }
       }
     }

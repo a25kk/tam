@@ -48,3 +48,4 @@ src/yapf
 src/z3c.*
 var
 .DS_Store
+.Python
