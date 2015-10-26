@@ -3,8 +3,8 @@
 // -----------------------------------
 
 .app-footer {
-    padding-top: $line-height-computed;
-    padding-bottom: $line-height-computed;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     text-transform: uppercase;
     color: #fff;
     background: url(../assets/img/footer.jpg) repeat-x top center transparent;
@@ -14,7 +14,7 @@
   @extend .container;
   font-weight: 400;
   padding: 0 2rem !important;
-  @media (min-width: $grid-float-breakpoint-max) {
+  @include media-breakpoint-up(md) {
       padding: 0 !important;
     }
   a {

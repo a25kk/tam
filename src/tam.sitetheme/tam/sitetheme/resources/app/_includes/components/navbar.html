@@ -1,58 +1,45 @@
 <nav class="app-navbar" id="app-navbar" role="navigation">
-<div class="container">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle app-navbar-toggle" data-toggle="collapse" data-target=".app-navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
+  <div class="app-navbar-header">
+      <div class="app-navbar-header-toggle">
+        <button type="button" class="app-navbar-toggle navbar-toggler hidden-sm-up" data-toggle="collapse" data-target="#app-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            &#9776;
+        </button>
+       </div>
   </div>
 
-  <div class="collapse navbar-collapse app-navbar-collapse">
-    <ul class="xnav xnavbar-nav app-navbar-nav" id="app-navbar-nav">
-      <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-home active" href="/">
+  <div class="navbar-collapse app-navbar-collapse collapse navbar-toggleable-xs" id="app-navbar-collapse">
+    <ul class="app-navbar-nav" id="app-navbar-nav">
+      <li class="app-navitem active">
+        <a class="app-navitem-tab app-navitem-tab-home" href="{{ page.base_url }}">
           <span>Startseite</span>
         </a>
       </li>
-      <li class="divider hidden-xs ">&middot;</li>
       <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-news" href="{{ page.base_url }}ueber-uns">
-          <span>Über uns</span>
+        <a class="app-navitem-tab app-navitem-tab-aktuelles" href="{{ page.base_url }}aktuelles">
+          <span>Aktuelles</span>
         </a>
       </li>
-      <li class="divider hidden-xs ">&middot;</li>
       <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-kuenstler" href="{{ page.base_url }}mitglieder">
-          <span>Mitglieder</span>
+        <a class="app-navitem-tab app-navitem-tab-landratsamt" href="{{ page.base_url }}landratsamt">
+          <span>Landratsamt</span>
         </a>
       </li>
-      <li class="divider hidden-xs ">&middot;</li>
       <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-events" href="{{ page.base_url }}themen">
-          <span>Themen</span>
+        <a class="app-navitem-tab app-navitem-tab-service" href="{{ page.base_url }}service">
+          <span>Service</span>
         </a>
       </li>
-      <li class="divider hidden-xs ">&middot;</li>
       <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-referenzen" href="{{ page.base_url }}projekte">
-          <span>Projekte</span>
+        <a class="app-navitem-tab app-navitem-tab-info" href="{{ page.base_url }}info">
+          <span>Info</span>
         </a>
       </li>
-      <li class="divider hidden-xs ">&middot;</li>
       <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-leistungen" href="{{ page.base_url }}veranstaltungen">
-          <span>Veranstaltungen</span>
-        </a>
-      </li>
-      <li class="divider hidden-xs ">&middot;</li>
-      <li class="app-navitem">
-        <a class="app-navitem-tab app-navitem-tab-kontakt" href="{{ page.base_url }}login_form">
-          <span>Login</span>
+        <a class="app-navitem-tab app-navitem-tab-hier-leben" href="{{ page.base_url }}hier-leben">
+          <span>Hier Leben</span>
         </a>
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->
-</div>
 </nav>

@@ -5,62 +5,68 @@
 
 // Make a gridrow
 .app-brand {
-  display: flex;
+  // display: flex;
+    @include make-row();
   align-items: center;
-  width: 100%;
-  margin-right: $padding-small-horizontal;
+  margin-right: $spacer;
   &-panel-inverse {
     width: 100%;
   }
+
 }
 
 //** Inline svg logo
 .app-brand-img {
   display: block;
-  width: 140px;
-  &-xs {
-    width: 64px;
-  }
-  &-sm {
-    width: 64px;
-  }
-  &-md {
-    width: 128px;
-  }
-  &-lg {
-    width: 272.576px
-  }
+  width: 100%;
+  //&-xs {
+  //  width: 64px;
+  //}
+  //&-sm {
+  //  width: 64px;
+  //}
+  //&-md {
+  //  width: 128px;
+  //}
+  //&-lg {
+  //  width: 272.576px
+  //}
   .app-brand-panel & {
-    flex: 1;
-     @media (min-width: $grid-float-breakpoint) {
-        flex: 0 0 33.3333%;
-     }
+      @include make-col();
+      @include make-col-span(12);
+      @include media-breakpoint-up(md) {
+          @include make-col-span(6);
+      }
   }
   .app-brand-panel-inverse & {
-    @media (min-width: $grid-float-breakpoint) {
-        flex: 0 0 25%;
-    }
+      @include make-col();
+      @include media-breakpoint-up(md) {
+            @include make-col-span(3);
+      }
   }
 }
 
-.app-brandname-logo {
-  width: 100%;
-  @media (min-width: $grid-float-breakpoint) {
-        width: 400px;
-     }
-  //.app-brand-img-xs & {
-  //  width: 32px;
-  //}
-  //.app-brand-img-sm & {
-  //  width: 64px;
-  //}
-  //.app-brand-img-md & {
-  //  width: 128px;
-  //}
-  //.app-brand-img-lg & {
-  //  width: 272px;
-  //}
-}
+//.app-brandname-logo {
+//  width: 140px;
+//  .app-brand-img-xs & {
+//    width: 32px;
+//  }
+//  .app-brand-img-sm & {
+//    width: 64px;
+//  }
+//  .app-brand-img-md & {
+//    width: 128px;
+//  }
+//  .app-brand-img-lg & {
+//    width: 272px;
+//  }
+//    .app-header-brandbar & {
+//        width: 64px;
+//        @include media-breakpoint-up(sm) {
+//            width: 128px;
+//        }
+//    }
+//}
 
 // The actual brandname/title
 .app-brand-title {
@@ -68,30 +74,34 @@
 }
 
 .app-brandname {
-  display: block;
-  padding: $padding-small-horizontal $padding-small-vertical;
-  font-size: 1.65rem;
-  font-weight: 500;
-  line-height: 1.25;
-  color: $app-primary;
-  .app-brand-panel & {
-    flex: 1;
-     @media (min-width: $grid-float-breakpoint) {
-        flex: 0 0 66.6666%;
-     }
-    margin-top: -($line-height-computed);
-  }
-  .app-brand-panel-inverse & {
+    display: block;
+    padding: $spacer;
     font-size: 1.25rem;
-    line-height: 1;
-    color: #fff;
-    @media (min-width: $grid-float-breakpoint) {
-        flex: 0 0 75%;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $app-primary;
+    .app-brand-panel & {
+          flex: 1;
+          @include media-breakpoint-up(md) {
+              flex: 0 0 66.6666%;
+           }
+          margin-top: -($spacer);
     }
-  }
+    .app-brand-panel-inverse & {
+      font-size: 1.25rem;
+      line-height: 1;
+      color: #fff;
+      @include media-breakpoint-up(md) {
+          flex: 0 0 75%;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+        font-size: 1.65rem;
+    }
 }
 
 // Sitewide claim
 .app-brand-aside {
-  @include make-md-column(4);
+    @include make-col();
+    @include make-col-span(4);
 }

@@ -4,7 +4,7 @@
 
 
 .app-wrapper {
-  @media (min-width: $screen-md-min) {
+  @include media-breakpoint-up(md) {
     background: url(../assets/img/bg.gif) repeat-x top center transparent;
   }
 }
@@ -19,18 +19,29 @@
 }
 
 .app-inner-contentwrapper {
-  @extend .row;
+  @include make-row();
+  border: 1px solid blue;
   //display: flex;
   //align-items: left;
   background: #fff;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-sm;
   margin-bottom: 2rem;
+  z-index: 10000;
+  position: relative;
 }
 
 .app-aside {
-  @extend .col-sm-4;
-  @media (min-width: $screen-md-min) {
-    padding-left: 2rem;
+  @include make-col-span(12);
+  @include media-breakpoint-up(md) {
+    @include make-col-span(4);
+  }
+
+  .card {
+    border: 0;
+  }
+
+  .card-header {
+    display: none;
   }
 
 }
@@ -40,7 +51,7 @@
 //
 //## Provides optional fullscreen layouts
 .app-main {
-  @extend .col-sm-8;
+  @include make-col-span(8);
   &-fullscreen {
     display: flex;
     align-items: center;
@@ -70,7 +81,7 @@
 //
 //## Define content specific styles
 .app-page {
-  padding: $line-height-computed;
+  padding: 1rem;
   //@extend .container;
   background: #fff;
 }
@@ -89,11 +100,11 @@
 // that has proper line-height on all media types
 .app-page-lead,
 .app-page-abstract {
-  margin-bottom: $line-height-computed;
+  margin-bottom: 1rem;
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.5;
-  @media (min-width: $screen-sm-min) {
+  @include media-breakpoint-up(sm) {
     font-size: 1.5rem;
   }
 }
@@ -115,7 +126,7 @@
 .image-inline {
   @extend .img-responsive;
   width: 100%;
-  border-radius: $border-radius-base;
+  border-radius: $border-radius-sm;
 }
 
 .highlight {

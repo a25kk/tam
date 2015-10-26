@@ -5,14 +5,14 @@
 
 .app-callout {
   padding: 0.5rem 1rem 1rem;
-  margin: $line-height-computed 0;
+  margin: 1rem 0;
   border-left: 5px solid #eee;
 }
 
 // Common spacing and style resets
 .app-callout-title {
   margin-top: 0;
-  margin-bottom: ceil(($line-height-computed / 4));
+  margin-bottom: ceil((1rem / 4));
 }
 
 .app-callout p:last-child {
@@ -22,5 +22,5 @@
 // Custom button styles
 .app-callout-btn {
   float: right;
-  margin-bottom: floor(($line-height-computed / 2));
+  margin-bottom: floor((1rem / 2));
 }

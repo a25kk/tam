@@ -1,18 +1,18 @@
 /* Portlets specific styles */
 
 .portlet {
+    margin: 0 !important;
     background: #fff;
-    padding-top: 2rem !important;
-    padding-bottom: 3rem !important;
 }
 
 .portletHeader, .managedPortlet .portletHeader {
     font-size: ($font-size-base * 1.2);
     font-weight: 700;
     background: $app-gray;
-    color: $app-primary;
-    padding: ($line-height-computed / 2) $line-height-computed;
+    color: #fff;
+    padding: 1rem;
     margin: 0;
+    display: none;
 }
 
 .portletHeader a, .managedPortlet .portletHeader a {
@@ -27,7 +27,7 @@
     padding: 0;
 
     h2, h3 {
-        font-size: ($font-size-large / 1.2);
+        font-size: ($font-size-base / 1.2);
         font-weight: 600;
         margin-top: 0;
     }
@@ -52,7 +52,7 @@ span.portletItemDetails {
 .portletFooter {
     background: transparent !important;
     margin: 0px !important;
-    padding: $line-height-computed 0;
+    padding: 1rem 0;
     border: 0px;
     text-align: left;
 }
@@ -112,7 +112,7 @@ span.portletItemDetails {
     padding: 0px 0px 0px 0px;
 
     .image-inline {
-        margin-bottom: $line-height-computed / 2;
+        margin-bottom: 1rem;
     }
 }
 
@@ -122,8 +122,14 @@ span.portletItemDetails {
 
 .portletStaticText p {
     padding: 0px 0px 0px 0px;
-    line-height: $line-height-computed;
-    margin-bottom: $line-height-computed / 2;
+    line-height: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-gruendach .portletStaticText p {
+    padding: 0px 1rem 0px 1rem !important;
+    line-height: 1rem;
+    margin-bottom: 1rem;
 }
 
 .portletStaticText ul {
@@ -139,6 +145,8 @@ span.portletItemDetails {
 /* Portlets Navigation Styles */
 
 .portletNavigationTree {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
     list-style: none !important;
     list-style-image: none !important;
     line-height: 1em;
@@ -165,7 +173,7 @@ span.portletItemDetails {
     padding: 0px !important;
 }
 .navTreeItem {
-    padding: 0;
+    padding: 0px;
     margin: 0px;
     font-weight: bold;
 }
@@ -173,20 +181,18 @@ span.portletItemDetails {
 .navTreeItem a, dd.portletItem .navTreeItem a {
     display: block;
     text-decoration: none;
-    padding: 5px 0 4px 20px !important;
+    padding: 1rem 0 !important;
     margin: 0;
     font-weight: normal;
     font-size: ($font-size-base / 1.2);
     text-align: left;
     border-bottom: 1px solid $app-gray!important;
-
-    @media (min-width: $grid-float-breakpoint-max) {
-      padding: 5px 0 4px 0 !important;
-    }
 }
 
 .navTreeItem a {
-    line-height: $line-height-computed;
+    background: url(../assets/img/arrow.gif) no-repeat 0px 12px;
+    //color: $app-gray;
+    line-height: 1rem;
 }
 
 .navTreeItem a:hover {
@@ -224,7 +230,7 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 }
 
 .navTreeItem .navTreeLevel1 li a:link {
-    padding-left: ($line-height-computed / 2) !important;
+    padding-left: 1rem !important;
 }
 
 .navTreeLevel2 {

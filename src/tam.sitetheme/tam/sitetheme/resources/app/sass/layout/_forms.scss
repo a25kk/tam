@@ -11,88 +11,25 @@ label {
   }
 }
 
-//== Password toggle
-//
-//## Hide/show password in [type="password"] fields
-::-ms-reveal,
-::-ms-clear {
-  display: none !important;
-}
-
-.hideShowPassword-toggle {
-  background: transparent;
-  border: 0;
-  border-radius: 0.25em;
-  color: #888;
-  cursor: pointer;
-  font-size: 0.75em;
-  font-weight: bold;
-  margin-right: 0.5em;
-  padding: 0.5em;
-  text-transform: uppercase;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-.hideShowPassword-toggle:hover,
-.hideShowPassword-toggle:focus {
-  background-color: #eee;
-  color: #555;
-  outline: transparent;
-}
-
-//
-// Forms
-//------------------------------------
-
-
-//== Inputs
-//
-//## Add basic styling to all input types
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
-    @extend.form-control;
-    @media (min-width: $screen-sm-min) {
-      input {
-        min-height: 35px !important;
-        border: 1px solid red;
-        border-radius: $border-radius-base;
-      }
+input[type='submit'],
+input[type='button'] {
+    @extend .btn;
+    @extend .btn-default;
+    &.context {
+        @extend .btn-default;
+    }
+    &.standalone {
+        @extend .btn-primary;
+    }
+    &.destructive {
+        @extend .btn-danger;
     }
 }
 
-//** Reset textarea height
-textarea {
-    height: auto;
+// Space out form controls
+.formControls {
+    @extend .form-group;
 }
-
-
-//** Checkbox label needs to be placed inline
-input[type="checkbox"] + label,
-.ArchetypesBooleanWidget label {
-    display: inline-block;
-    margin-left: ceil(($line-height-computed / 4));
-}
-
-input[type="radio"], input[type="checkbox"] {
-    line-height: $line-height-computed;
-    margin: 0 10px 0 0 !important;
-}
-
 
 //== Password toggle
 //
@@ -122,40 +59,4 @@ input[type="radio"], input[type="checkbox"] {
   background-color: #eee;
   color: #555;
   outline: transparent;
-}
-
-.app-callout {
-  color: #fff;
-  padding: $line-height-computed;
-  h4 {
-    display: none;
-  }
-}
-
-.app-callout-danger {
-  @extend.alert-danger;
-}
-
-.app-callout-success {
-  @extend.alert-success;
-}
-
-.error {
-  color: #A94442;
-}
-
-.event-registration {
-  .alert-dismissable {
-    display: none;
-  }
-}
-
-#mc_embed_signup {
-  background:transparent; 
-  clear:left; 
-  font:14px; 
-}
-
-#mc_embed_signup form {
-  padding: 0 !important;
 }
