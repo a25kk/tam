@@ -7322,6 +7322,106 @@ input[type='button'] .caret
     }
 }
 
+.alert
+{
+    margin-bottom: 1rem;
+    padding: 15px;
+
+    border: 1px solid transparent;
+}
+.alert > p,
+.alert > ul
+{
+    margin-bottom: 0;
+}
+.alert > p + p
+{
+    margin-top: 5px;
+}
+
+.alert-heading
+{
+    color: inherit;
+}
+
+.alert-link
+{
+    font-weight: bold;
+}
+
+.alert-dismissible
+{
+    padding-right: 35px;
+}
+.alert-dismissible .close
+{
+    position: relative;
+    top: -2px;
+    right: -21px;
+
+    color: inherit;
+}
+
+.alert-success
+{
+    color: #3c763d; 
+    border-color: #d0e9c6;
+    background-color: #dff0d8;
+}
+.alert-success hr
+{
+    border-top-color: #c1e2b3;
+}
+.alert-success .alert-link
+{
+    color: #2b542c;
+}
+
+.alert-info
+{
+    color: #31708f; 
+    border-color: #bcdff1;
+    background-color: #d9edf7;
+}
+.alert-info hr
+{
+    border-top-color: #a6d5ec;
+}
+.alert-info .alert-link
+{
+    color: #245269;
+}
+
+.alert-warning
+{
+    color: #8a6d3b; 
+    border-color: #faf2cc;
+    background-color: #fcf8e3;
+}
+.alert-warning hr
+{
+    border-top-color: #f7ecb5;
+}
+.alert-warning .alert-link
+{
+    color: #66512c;
+}
+
+.alert-danger
+{
+    color: #a94442; 
+    border-color: #ebcccc;
+    background-color: #f2dede;
+}
+.alert-danger hr
+{
+    border-top-color: #e4b9b9;
+}
+.alert-danger .alert-link
+{
+    color: #843534;
+}
+
 .close
 {
     font-size: 1.5rem;
@@ -8925,6 +9025,29 @@ div.riform .label
     }
 }
 
+.app-navbar-toggle:hover,
+.app-navbar-toggle:focus
+{
+    border-radius: .2rem; 
+    background-color: #ccc;
+}
+
+.app-navbar-toggle .icon-bar
+{
+    border-radius: .2rem; 
+    background-color: #ccc;
+}
+
+.app-navbar-toggle .icon-bar
+{
+    display: block;
+
+    width: 30px;
+    height: 2px;
+
+    border-radius: .2rem;
+}
+
 .app-navbar-nav
 {
     margin-bottom: 0;
@@ -9085,7 +9208,7 @@ div.riform .label
 
 .app-footer
 {
-    padding-top: 1rem;
+    padding-top: 2rem;
     padding-bottom: 1rem;
 
     text-transform: uppercase;
@@ -10607,7 +10730,8 @@ dl.portlet ul.navTree .navTreeCurrentItem
 {
     font-size: .85rem;
 
-    margin-bottom: 0; 
+    margin-top: 1.2rem; 
+    margin-bottom: 0;
 
     background-color: transparent;
 }

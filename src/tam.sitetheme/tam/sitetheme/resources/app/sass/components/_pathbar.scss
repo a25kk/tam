@@ -6,6 +6,7 @@
   font-size: $font-size-sm;
   background-color: transparent;
   margin-bottom: 0;
+  margin-top: 1.2rem;
   @include media-breakpoint-down(xs) {
       display: none;
     }

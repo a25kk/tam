@@ -16,27 +16,28 @@
 
 
 
-//// Navbar toggle button visible on small displays
-//.app-navbar-toggle {
-//  border-color: $app-gray;
-//  &:hover,
-//  &:focus {
-//    background-color: $navbar-default-toggle-hover-bg;
-//  }
-//  .icon-bar {
-//    background-color: $navbar-default-toggle-icon-bar-bg;
-//  }
-//  // Bars
-//  .icon-bar {
-//    display: block;
-//    width: 30px;
-//    height: 2px;
-//    border-radius: 1px;
-//  }
-//  .icon-bar + .icon-bar {
-//    margin-top: 8px;
-//  }
-//}
+// Navbar toggle button visible on small displays
+.app-navbar-toggle {
+  &:hover,
+  &:focus {
+    background-color: #ccc;
+    border-radius: $border-radius-sm;
+  }
+  .icon-bar {
+    background-color: #ccc;
+    border-radius: $border-radius-sm;
+  }
+  // Bars
+  .icon-bar {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: $border-radius-sm;
+  }
+  .icon-bar + .icon-bar {
+    //margin-top: 8px;
+  }
+}
 
 //.app-navbar-collapse {
 //  margin-left: -30px !important;
@@ -79,10 +80,8 @@
     background: transparent;
     &:last-child {
       padding-right: 0;
+      }
     }
-    }
-
-
     @include media-breakpoint-up(lg) {
     padding-top: 0;
     padding-right: 1.4rem;
