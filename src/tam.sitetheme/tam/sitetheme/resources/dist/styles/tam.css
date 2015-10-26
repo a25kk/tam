@@ -10994,6 +10994,7 @@ body.section-front-page .app-pathbar
 }
 .app-main-login .app-brandname-logo
 {
+    width: 400px; 
     margin: 2rem auto;
 }
 

@@ -139,7 +139,7 @@
                                                id ac_name;
                                                value login_name;"
                                />
-                        <a href="#app-signin-content" class="app-signin-suggestion animated hidden" id="app-signin-suggestion"></a>
+                        <a href="#app-signin-content" class="app-signin-suggestion animated hidden-xl-down" id="app-signin-suggestion"></a>
                     </div>
                 </div>
 
