@@ -3764,7 +3764,7 @@ a
 {
     text-decoration: none; 
 
-    color: #274d38;
+    color: #377497;
 }
 a:focus,
 a:hover
@@ -5747,7 +5747,7 @@ input[type='button'].destructive:disabled:hover
 {
     font-weight: normal;
 
-    color: #274d38;
+    color: #377497;
     border-radius: 0;
 }
 .btn-link,
@@ -10663,7 +10663,7 @@ dd.portletItem .navTreeItem a
 
 .navTreeItem a:hover
 {
-    color: #274d38 !important;
+    color: #377497 !important;
 }
 
 dl.portlet ul.navTree .navTreeCurrentItem
@@ -10674,7 +10674,7 @@ dl.portlet ul.navTree .navTreeCurrentItem
 
 .navTreeCurrentItem
 {
-    color: #274d38 !important;
+    color: #377497 !important;
 }
 
 .navTreeItem .active
@@ -11165,6 +11165,13 @@ body.section-front-page .app-pathbar
 .app-page-body ol
 {
     padding-left: 1rem;
+}
+
+.app-page-body ul li,
+.app-page-body ol li
+{
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .app-page-section
