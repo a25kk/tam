@@ -9106,7 +9106,7 @@ div.riform .label
     {
         width: auto;
         padding-top: 0;
-        padding-right: 1.4rem;
+        padding-right: 1rem;
         padding-left: .8rem;
 
         background: transparent;
@@ -9140,7 +9140,7 @@ div.riform .label
 
 .app-navbar-nav li a
 {
-    font-size: 1rem;
+    font-size: .9090909091rem;
 
     padding-left: 0;
 
