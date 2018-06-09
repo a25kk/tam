@@ -33,9 +33,9 @@
   font-weight: 500;
   line-height: 1;
   color: $app-primary;
-  .app-brandname-logo {
-    @extend .img-responsive;
-  }
+  //.app-brandname-logo {
+  //  @extend .img-fluid;
+  //}
 }
 
 .app-brandname-heading {

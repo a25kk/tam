@@ -27,4 +27,4 @@ class TestInstall(IntegrationTestCase):
         """Test that ITamSitecontentLayer is registered."""
         from tam.sitecontent.interfaces import ITamSitecontentLayer
         from plone.browserlayer import utils
-        self.failUnless(ItamSitecontentLayer in utils.registered_layers())
+        self.failUnless(ITamSitecontentLayer in utils.registered_layers())

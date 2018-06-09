@@ -1,24 +1,21 @@
 # -*- coding: utf-8 -*-
 """Module providing content banners"""
-
 from Acquisition import aq_inner
 from Acquisition import aq_parent
 from five import grok
 from plone import api
-from zope.component import getMultiAdapter
-
-from zope import schema
-from plone.dexterity.content import Item
-
-from plone.directives import form
+from plone.app.layout.navigation.interfaces import INavigationRoot
 from plone.app.textfield import RichText
+from plone.app.z3cform.widget import LinkFieldWidget
+from plone.app.z3cform.utils import replace_link_variables_by_paths
+from plone.dexterity.content import Item
+from plone.directives import form
 from plone.namedfile.field import NamedBlobImage
 from plone.namedfile.interfaces import IImageScaleTraversable
-
-from Products.Five.utilities.marker import mark
-
 from plone.uuid.interfaces import IUUID
-from plone.app.layout.navigation.interfaces import INavigationRoot
+from Products.Five.utilities.marker import mark
+from zope import schema
+from zope.component import getMultiAdapter
 
 from ade25.banner.interfaces import IBannerEnabled
 
@@ -48,6 +45,13 @@ class IContentBanner(form.Schema, IImageScaleTraversable):
     )
     text = RichText(
         title=_(u"Block Body Text"),
+        required=False,
+    )
+    form.widget(link=LinkFieldWidget)
+    link = schema.TextLine(
+        title=_(u"Link"),
+        description=_(u"Optional internal or external link that will be "
+                      u"applied to the banner automatically"),
         required=False,
     )
     image = NamedBlobImage(
@@ -88,7 +92,7 @@ class ContentView(grok.View):
     def has_data(self):
         context = aq_inner(self.context)
         has_content = False
-        if (context.headline or context.Description()):
+        if (context.headline or context.text or context.Description()):
             has_content = True
         return has_content
 
@@ -138,9 +142,21 @@ class BannerView(grok.View):
     def has_data(self):
         context = aq_inner(self.context)
         has_content = False
-        if (context.headline or context.Description()):
+        if (context.headline or context.text or context.Description()):
             has_content = True
         return has_content
+
+    def has_link_action(self):
+        context = aq_inner(self.context)
+        if context.link:
+            return True
+        return False
+
+    def get_link_action(self):
+        context = aq_inner(self.context)
+        link = context.link
+        link_action = replace_link_variables_by_paths(context, link)
+        return link_action
 
     def banner_position(self):
         context = aq_inner(self.context)

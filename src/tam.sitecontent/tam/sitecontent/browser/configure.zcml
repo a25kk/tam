@@ -1,8 +1,21 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:z3c="http://namespaces.zope.org/z3c"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="tam.sitecontent">
+
+  <browser:page
+      for="tam.sitecontent.sectionfolder.ISectionFolder"
+      name="sectionfolder-view"
+      class=".sectionfolder.SectionFolderView"
+      template="sectionfolder.pt"
+      permission="zope2.View"
+      layer="..interfaces.ITamSitecontentLayer"
+      />
 
   <browser:page
       for="tam.sitecontent.contentpage.IContentPage"
@@ -13,14 +26,52 @@
       layer="..interfaces.ITamSitecontentLayer"
       />
 
-  <!-- Content page image gallery -->
-  <browser:page
-      for="tam.sitecontent.contentpage.IContentPage"
-      name="gallery-view"
-      class=".contentpage.GalleryView"
-      template="galleryview.pt"
-      permission="zope2.View"
-      layer="..interfaces.ITamSitecontentLayer"
-      />
+    <!-- News Item preview card -->
+    <browser:page
+            for="plone.app.contenttypes.interfaces.INewsItem"
+            name="card-news-item"
+            class=".cards.NewsItemCardView"
+            template="card-news.pt"
+            permission="zope2.View"
+            layer="..interfaces.ITamSitecontentLayer"
+    />
+
+    <browser:page
+            for="plone.app.contenttypes.interfaces.INewsItem"
+            name="card-news-item-preview"
+            class=".cards.NewsItemCardPreview"
+            template="card-news-preview.pt"
+            permission="zope2.View"
+            layer="tam.sitecontent.interfaces.ITamSitecontentLayer"
+    />
+
+    <!-- Content page image gallery -->
+    <browser:page
+        for="tam.sitecontent.contentpage.IContentPage"
+        name="gallery-view"
+        class=".contentpage.GalleryView"
+        template="galleryview.pt"
+        permission="zope2.View"
+        layer="..interfaces.ITamSitecontentLayer"
+        />
+  
+    <browser:page
+        for="tam.sitecontent.contentpage.IContentPage"
+        name="gallery-preview"
+        class=".contentpage.GalleryPreview"
+        template="gallerypreview.pt"
+        permission="zope2.View"
+        layer="..interfaces.ITamSitecontentLayer"
+        />
+  
+    <!-- Frontpage Views -->
+    <browser:page
+        for="plone.app.layout.navigation.interfaces.INavigationRoot"
+        name="frontpage-view"
+        class=".frontpage.FrontPageView"
+        template="frontpage.pt"
+        permission="zope2.View"
+        layer="..interfaces.ITamSitecontentLayer"
+        />
 
 </configure>

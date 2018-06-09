@@ -2,12 +2,12 @@
 tam.sitecontent
 ====================
 
-Site specific contenttypes
+Sitecontent package containing folderish content pages
 
-* `Source code @ GitHub <https://github.com/potzenheimer/tam.sitecontent>`_
+* `Source code @ GitHub <https://github.com/a25kk/tam.sitecontent>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/tam.sitecontent>`_
 * `Documentation @ ReadTheDocs <http://tamsitecontent.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/potzenheimer/tam.sitecontent>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/a25kk/tam.sitecontent>`_
 
 How it works
 ============

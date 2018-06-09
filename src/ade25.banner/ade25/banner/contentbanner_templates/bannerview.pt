@@ -1,51 +1,62 @@
 <div class="app-banner-item item show"
     tal:condition="view/show_gallery"
     tal:define="is_active view/is_first_banner;
-                base_class string:app-banner-item app-banner-item-${view/banner_position} app-banner-item-lazy owl-lazy"
-    tal:attributes="data-src view/getImageTag;
-                    class python:is_active and base_class + ' active' or base_class">
+                base_class string:app-banner-item app-banner-item-${view/banner_position} app-banner-item-lazy lazyload"
+    tal:attributes="data-bg view/getImageTag;
+                    style string:${view/banner_background};
+                    class python:is_active and base_class + ' active' or base_class + ' app-banner__item--lazy'">
     <div class="app-banner-item-content">
         <div class="app-banner-item-body"
-            tal:condition="view/has_data">
-            <div class="app-banner-item-headline">
-                <h1 class="app-baner-item-title">
-                    <span class="colortext"
-                        tal:content="context/headline">
-                        Headline</span>
-                </h1>
+                tal:condition="view/has_data">
+            <div class="app-banner-item-title" tal:condition="context/headline">
+                <div class="app-banner-item-headline">
+                    <tal:link tal:condition="context/link">
+                        <a class="app-banner__action app-banner__action--link" href="${view/get_link_action}">${context/headline}</a>
+                    </tal:link>
+                    <tal:plain tal:condition="not:context/link">
+                            ${context/headline}
+                    </tal:plain>
+                </div>
             </div>
-            <div class="app-banner-item-abstract">
-                <p class="app-banner-item-description"
-                    tal:content="context/Description">
-                    Description
-                </p>
+            <div class="app-banner-item-abstract" tal:condition="context/Description">
+                ${context/Description}
             </div>
+            <div class="app-banner-text"
+                tal:condition="context/text"
+                tal:content="structure context/text/output" />
+            <tal:action tal:condition="context/link">
+                <div class="app-banner__action-block">
+                    <a class="app-btn app-btn-default app-banner__action app-banner__action--button" href="${view/get_link_action}"
+                        tal:attributes="href view/get_link_action">
+                        weiterlesen&hellip;
+
+                    </a>
+                </div>
+            </tal:action>
         </div>
     </div>
 </div>
 <div class="app-banner-item item show"
     tal:condition="not:view/show_gallery"
     tal:define="is_active view/is_first_banner;
-                base_class string:app-banner-item app-banner-item-${view/banner_position} app-banner-item-lazy owl-lazy"
-    tal:attributes="data-src view/getImageTag;
+                base_class string:app-banner-item app-banner-item-${view/banner_position} app-banner-item-lazy lazyload"
+    tal:attributes="data-bg view/getImageTag;
                     style string:${view/banner_background};
                     class python:is_active and base_class + ' active' or base_class">
     <div class="app-banner-item-content">
         <div class="app-banner-item-body"
-            tal:condition="view/has_data">
-            <div class="app-banner-item-headline">
-                <h1 class="app-baner-item-title">
-                    <span class="colortext"
-                        tal:content="context/headline">
-                        Headline</span>
-                </h1>
+                tal:condition="view/has_data">
+            <div class="app-banner-item-title" tal:condition="context/headline">
+                <div class="app-banner-item-headline">
+                    ${context/headline}
+                </div>
             </div>
-            <div class="app-banner-item-abstract">
-                <p class="app-banner-item-description"
-                    tal:content="context/Description">
-                    Description
-                </p>
+            <div class="app-banner-item-abstract" tal:condition="context/Description">
+                ${context/Description}
             </div>
+            <div class="app-banner-text"
+                tal:condition="context/text"
+                tal:content="structure context/text/output" />
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@ long_description = read('README.rst')
 setup(
     name='tam.sitecontent',
     version='1.0.0',
-    description="Site specific contenttypes",
+    description="Sitecontent package containing folderish content pages",
     long_description=long_description,
     # Get more from http://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
@@ -23,8 +23,8 @@ setup(
         "Programming Language :: Python",
     ],
     keywords='Plone Dexterity',
-    author='Ade25',
-    author_email='info@ade25.de',
+    author='Serge Davidov',
+    author_email='sd@kreativkombinat.de',
     url='http://pypi.python.org/pypi/tam.sitecontent',
     license='BSD',
     packages=find_packages(exclude=['ez_setup']),
@@ -32,13 +32,12 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.api',
-        'plone.app.dexterity [grok, relations]',
-        'plone.app.relationfield',
-        'plone.formwidget.contenttree',
-        'plone.namedfile [blobs]',
-        'requests[security]',
         'setuptools',
+        'plone.api',
+        'plone.app.dexterity [relations]',
+        'plone.app.relationfield',
+        'plone.namedfile [blobs]',
+        'plone.formwidget.contenttree',
     ],
     extras_require={
         'test': [

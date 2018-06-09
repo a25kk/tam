@@ -4,10 +4,11 @@
 
 
 @import 'utils/variables';
+@import 'utils/mixins';
 
 @import 'vendors/font-awesome';
 @import 'vendors/bootstrap';
-@import 'vendors/owl.carousel';
+@import 'vendors/flickity';
 
 @import 'base/animation';
 @import 'base/scaffolding';
@@ -29,7 +30,12 @@
 @import 'components/newsletter';
 @import 'components/pathbar';
 @import 'components/callouts';
+@import 'components/buttons';
+@import 'components/nav-bar';
+@import 'components/navlist';
 
 @import 'pages/signin';
 
 @import 'themes/theme';
+
+@import 'shame.scss';

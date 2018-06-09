@@ -11,7 +11,8 @@
 }
 
 .app-footer-content {
-  @extend .container;
+  @include make-container();
+  @include make-container-max-widths();
   font-weight: 400;
   padding: 0 2rem !important;
   @include media-breakpoint-up(md) {
@@ -24,11 +25,19 @@
 }
 
 .app-footer-logo {
-	max-width: 300px;
+	width: 100%;
 	.app-brandname-logo {
-		width: 300px;
+    padding-top: 0;
+    @include media-breakpoint-up(md) {
+      width: 300px;
+      padding-top: 2rem;
+    }
 		path {
   			fill: #fff;
 		}
 	} 
+}
+
+.app-copyright {
+  padding: 0 1rem;
 }

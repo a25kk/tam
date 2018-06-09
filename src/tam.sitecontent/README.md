@@ -1,21 +1,26 @@
 # tam.sitecontent
 
-## Site specific contenttypes
+## Sitecontent package containing folderish content pages
 
-* `Source code @ GitHub <https://github.com/potzenheimer/tam.sitecontent>`_
+* `Source code @ GitHub <https://github.com/a25kk/tam.sitecontent>`_
 * `Releases @ PyPI <http://pypi.python.org/pypi/tam.sitecontent>`_
 * `Documentation @ ReadTheDocs <http://tamsitecontent.readthedocs.org>`_
-* `Continuous Integration @ Travis-CI <http://travis-ci.org/potzenheimer/tam.sitecontent>`_
+* `Continuous Integration @ Travis-CI <http://travis-ci.org/a25kk/tam.sitecontent>`_
 
 ## How it works
 
 This package provides a Plone addon as an installable Python egg package.
 
-The generated Python package holds an example content type `ContentPage` which
-provides a folderish version of the default **Page** document type.
+The generated Python package hold the necessary scaffold to add content types
+via the 'contenttype' template and to add functionality.
 
-The implementation is kept simple on purpose and asumes that the developer will
-add further content manually.
+In order to get productive you still need to generate a contenttype
+
+```bash
+$ cd tam.sitecontent/src/tam/sitecontent/
+$ mrbob --config ~/.mrbob.ini -O example_type bobtemplates:contenttype
+
+```
 
 
 ## Installation

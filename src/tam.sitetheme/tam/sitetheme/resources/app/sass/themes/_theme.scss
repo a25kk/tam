@@ -11,8 +11,10 @@
 }
 
 .app-outer-contentwrapper {
-  @extend .container;
+  @include make-container();
+  @include make-container-max-widths();
   border-radius: $border-radius-sm;
+  padding: 2rem;
 }
 
 .section-kontakt .app-outer-contentwrapper {
@@ -32,10 +34,11 @@
 }
 
 .app-aside {
-  @include make-col-span(12);
+  @include make-col(12);
   border-radius: $border-radius-sm;
   @include media-breakpoint-up(md) {
-    @include make-col-span(4);
+    @include make-col(4);
+    padding: 1rem;
   }
 
   .card {
@@ -54,9 +57,10 @@
 //
 //## Provides optional fullscreen layouts
 .app-main {
-  @include make-col-span(12);
+  @include make-col(12);
   @include media-breakpoint-up(md) {
-    @include make-col-span(8);
+    @include make-col(8);
+    padding: 1.5rem 2rem;
   &-fullscreen {
     display: flex;
     align-items: center;
@@ -78,7 +82,7 @@
   //@extend .container;
   &-centerstage {
     //@extend .container-fluid;
-    @extend .center-block;
+    //@extend .center-block;
     max-width: 480px;
   }
 }
@@ -139,9 +143,14 @@
 }
 
 .image-inline {
-  @extend .img-responsive;
+  @extend .img-fluid;
   width: 100%;
   border-radius: $border-radius-sm;
+}
+
+.app-img {
+  @extend .img-fluid;
+  width: 100%;
 }
 
 .highlight {
