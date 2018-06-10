@@ -267,21 +267,22 @@
                 css:theme="#app-front-page-cards" />
 
         <!-- Alert and portal messages -->
+        <before css:content=".portalMessage" css:theme="#content" />
         <strip css:content=".portalMessage dd"/>
-        <replace css:content=".portalMessage" method="raw">
+        <replace css:content=".portalMessage" >
             <xsl:choose>
                 <xsl:when css:test=".portalMessage[style]"/>
                 <xsl:when css:test=".portalMessage">
-                    <div class="app-alert app-alert--default app-alert--dismissable" role="alert">
+                    <div class="app-callout app-callout-default alert-dismissable" role="alert">
                         <xsl:choose>
                             <xsl:when css:test=".info">
-                                <xsl:attribute name="class">app-alert app-alert--success app-alert--dismissable</xsl:attribute>
+                                <xsl:attribute name="class">app-callout app-callout-success alert-dismissable</xsl:attribute>
                             </xsl:when>
                             <xsl:when css:test=".error">
-                                <xsl:attribute name="class">app-alert app-alert--danger app-alert--dismissable</xsl:attribute>
+                                <xsl:attribute name="class">app-callout app-callout-danger alert-dismissable</xsl:attribute>
                             </xsl:when>
                             <xsl:when css:test=".warning">
-                                <xsl:attribute name="class">app-alert app-alert--warning app-alert--dismissable</xsl:attribute>
+                                <xsl:attribute name="class">app-callout app-callout-warning alert-dismissable</xsl:attribute>
                             </xsl:when>
                         </xsl:choose>
                         <h4><xsl:apply-templates select="./dt/*"/></h4>
@@ -290,6 +291,7 @@
                 </xsl:when>
             </xsl:choose>
         </replace>
+        
         <rules css:if-not-content=".template-prefs_install_products_form">
             <before css:content=".portalMessage" css:theme="#content" />
         </rules>
