@@ -12644,8 +12644,6 @@ fieldset[disabled] a.searchButton {
   background: #fff;
   border-radius: 0.2rem;
   margin-bottom: 2rem;
-  z-index: 10000;
-  position: relative;
 }
 
 .app-aside {

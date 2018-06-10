@@ -24,13 +24,9 @@
 
 .app-inner-contentwrapper {
   @include make-row();
-  //display: flex;
-  //align-items: left;
   background: #fff;
   border-radius: $border-radius-sm;
   margin-bottom: 2rem;
-  z-index: 10000;
-  position: relative;
 }
 
 .app-aside {
