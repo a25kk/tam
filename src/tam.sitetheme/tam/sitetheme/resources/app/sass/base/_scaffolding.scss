@@ -6,7 +6,7 @@
 //** Adjust font weight for initialized webfonts
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #e7e6e6;
+    background-color: #fff;
     @include when-inside('.fonts--loaded') {
         font-weight: 300;
     }

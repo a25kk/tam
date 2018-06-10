@@ -76,9 +76,7 @@
     <theme href="dist/signin/index.html" css:if-content="body.template-mail_password_response" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_form" />
     <theme href="dist/signin/index.html" css:if-content="body.template-pwreset_finish" />
-    <!--<theme href="dist/frontpage/index.html" css:if-content="body.template-frontpage-view" />-->
-
-    <!--<theme href="dist/frontpage/index.html" css:if-content="body.template-frontpage-view" />-->
+    <theme href="dist/full/index.html" css:if-content="body.section-kontakt" />
 
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
@@ -291,7 +289,7 @@
                 </xsl:when>
             </xsl:choose>
         </replace>
-        
+
         <rules css:if-not-content=".template-prefs_install_products_form">
             <before css:content=".portalMessage" css:theme="#content" />
         </rules>

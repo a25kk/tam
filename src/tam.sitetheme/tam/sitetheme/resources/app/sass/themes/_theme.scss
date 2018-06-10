@@ -65,6 +65,10 @@
   } 
 }
 
+.app-main-full {
+  @include make-col(12);
+}
+
 .app-main-login {
   @extend .container;
   text-align: center;

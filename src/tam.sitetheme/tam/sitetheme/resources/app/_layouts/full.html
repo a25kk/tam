@@ -1,0 +1,31 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include base/head.html %}
+  </head>
+  <body>
+    <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+    <div class="app-wrapper dim-in dim-in-3">
+    {% include components/toolbar.html %}
+    {% include layout/header.html %}
+    {% include components/banner.html %}
+    <div class="app-outer-contentwrapper">
+    <div class="app-inner-contentwrapper">
+    <main class="app-main-full" role="main">
+    {% include components/pathbar.html %}
+          {{ content }}
+    </main>
+    
+    </div>
+    </div>
+    {% include layout/footer.html %}
+    </div>
+    <div>
+        {% include base/piwik.html %}
+    </div>
+  </body>
+</html>

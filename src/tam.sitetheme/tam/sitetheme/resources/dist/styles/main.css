@@ -10013,7 +10013,7 @@ https://flickity.metafizzy.co
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #e7e6e6;
+  background-color: #fff;
 }
 
 .fonts--loaded body {
@@ -12752,6 +12752,12 @@ fieldset[disabled] a.searchButton {
     -ms-flex-pack: center;
         justify-content: center;
   }
+}
+
+.app-main-full {
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+  max-width: 100%;
 }
 
 .app-main-login {
