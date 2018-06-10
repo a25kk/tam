@@ -130,6 +130,21 @@
     }
 }
 
+/* ---- flickity transform overrides ---- */
+
+.flickity-slider { 
+    transform: none !important; 
+}
+
+.app-banner-item {
+    left: 0 !important;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.app-banner-item.is-selected {
+    opacity: 1;
+}
+
 
 /* ---- flickity overrides ---- */
 
